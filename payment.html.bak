@@ -46,12 +46,12 @@
 							<Option>11</Option>
 							<Option>12</Option>
 						</select>
-						<input name="expiryYear" maxlength="2" size="2"/>
+						<input name="expiryYear" maxlength="2"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Security Code*: </td>
-					<td><input name="securityCode" maxlength="3" size="3"/></td>
+					<td><input name="securityCode" maxlength="3"/></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" value="Stage 3 - Review Bookings and Details"/></td>
