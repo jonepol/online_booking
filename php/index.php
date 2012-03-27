@@ -3,6 +3,7 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
+	 	 <link rel='stylesheet' type='text/css' href='default.css'>
 	 </head>
 	 <body>
 	 	<?php include("menu.php"); ?>
@@ -18,10 +19,6 @@
 	 	<div id="information">
 	 		
 	 	</div>
-	 	
-		<div id="footer">
-  		 Copyright &copy;  2012 Ben & Tony
-		</div>
-	 	
+	 	<?php include("footer.php"); ?>
 	 </body>
 </html>
