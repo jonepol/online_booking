@@ -22,10 +22,10 @@
 			$destination = $_REQUEST['destination'];
 			
 			if ($origin != "" || $destination != "") {
-				if ($origin != "") {
+				if ($destination == "") {
 					$query_string = "select * from flights where from_city='".$origin."';";
 				}
-				else if ($destination != "") {
+				else if ($origin == "") {
 					$query_string = "select * from flights where to_city='".$destination."';";
 				}
 				else {
