@@ -6,7 +6,7 @@
 	 	 <link rel='stylesheet' type='text/css' href='default.css'>
 	 </head>
 	 <body>
-	 	<?php include("menu.php"); ?>
+	 	<?php include("menu.inc"); ?>
 	 		
 	 	<div id="content">
 	 		<h4>welcome to online travel booking system</h4>
@@ -19,6 +19,6 @@
 	 	<div id="information">
 	 		
 	 	</div>
-	 	<?php include("footer.php"); ?>
+	 	<?php include("footer.inc"); ?>
 	 </body>
 </html>

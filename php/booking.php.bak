@@ -68,6 +68,9 @@
 	   	 </table>
 	   </form>	   
 	 	</div>
+	 	<div id="information">
+	 	</div>
+	 	<?php include("footer.php") ?>
 	 </body>
 
 </html>

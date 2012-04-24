@@ -7,7 +7,7 @@
 	 </head>
 	
 	<body>
-		<?php include("menu.php") ?>
+		<?php include("menu.inc") ?>
 		<div id="content">
 			<p>personal detail goes here</p>
 		
@@ -64,7 +64,7 @@
 	 </div>
 	 <div id="information">
 	 </div>
-	 <?php include("footer.php") ?>
+	 <?php include("footer.inc") ?>
 	</body>
 	 
 </html>

@@ -6,7 +6,7 @@
 	 	 <link rel="stylesheet" type="text/css" href="default.css">
 	 </head>
 	 <body>
-	 	  <?php include("menu.php") ?>
+	 	  <?php include("menu.inc") ?>
 	 	  <div id="content">
 	 	  	<form name="personDetail" method="POST">
 	 			<table>
@@ -27,6 +27,6 @@
 	 	 </div>
 	 	 <div id="information">
 	 	 </div>
-	 	 <?php include("footer.php") ?>
+	 	 <?php include("footer.inc") ?>
 	</body>
 </html>
