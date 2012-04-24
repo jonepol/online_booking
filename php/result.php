@@ -8,7 +8,7 @@
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>
-	 	 <div id="content">
+		 <div id="content">
 	 	  	<?php
 			require_once "db_setting.inc";
 			
@@ -17,6 +17,10 @@
 				echo "Connect Failed<br>";
 				exit;
 			}
+			
+			// $link = mysql_connect("rerun.it.uts.edu.au", "potiro", "pcXZb(kL")
+				// or die ("Can't connect to database");
+			// mysql_select_db("poti", $link);
 			
 			$origin = $_REQUEST['origin'];
 			$destination = $_REQUEST['destination'];
@@ -29,27 +33,42 @@
 					$query_string = "select * from flights where to_city='".$destination."';";
 				}
 				else {
-					$query_string = "select * from routes where from_city='".$origin."' and to_city='".$destination."';";
+					$query_string = "select * from flights where from_city='".$origin."' and to_city='".$destination."';";
 				}
 				$result = $dbc->query($query_string);
+				//$result = mysql_query($query_string, $link);
 			}
 			
 			if (mysqli_num_rows($result) > 0)
 			{
-				print "<table border=0>";
-				while ( $a_row = $result->fetch_row()) {
+			
+			?>
+			
+			<table border=0>
+			<tr>
+			<td>From</td>
+			<td>To</td>
+			<td>Select</td>
+			</tr>
+			
+			<?php
+				while ( $a_row = $result->fetch_assoc()) {
 					 print "<tr>\n";
-					 foreach ($a_row as $field)
-						 print "\t<td>$field</td>\n";
-					 print "</tr>";
+					 print "\t<td>$a_row[from_city]</td>\n";
+					 print "\t<td>$a_row[to_city]</td>\n";
+					 print "\t<td><input type=\"checkbox\"></td>\n";
+					 print "</tr>\n";
 				}
-				print "</table>";
+				print "</table>\n";
+				print "<a href=\"search.php\"><input type=\"submit\" value=\"<New Search\"></a>\n";
+				print "<a href=\"booking.php\"><input type=\"submit\" value=\"Make Booking for Selected Flight\"></a>\n";
 			}
 			else {
-				print "no result";
+				print "no result\n";
 			}
 			
 			?>
+			
 	 	 </div>
 	 	 <div id="information">
 	 	 </div>
