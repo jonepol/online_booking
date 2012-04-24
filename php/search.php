@@ -13,54 +13,14 @@
 	 	  		<tr>
 	 	  			<td width="120px">Enter Origin:</td>
 	 	  			<td>
-	 	  				<select>
-	 	  					<option value="Albany">Albany</option>
-								<option value="Alice Springs">Alice Springs</option>
-								<option value="Bendigo">Bendigo</option>
-								<option value="Brisbane">Brisbane</option>
-								<option value="Broken Hill">Broken Hill</option>
-								<option value="Broome">Broome</option>
-								<option value="Cairns">Cairns</option>
-								<option value="Canberra">Canberra</option>
-								<option value="Darwin">Darwin</option>
-								<option value="Hobart">Hobart</option>
-								<option value="Kalgoorlie">Kalgoorlie</option>
-								<option value="Launceston">Launceston</option>
-								<option value="Melbourne">Melbourne</option>
-								<option value="Mt Isa">Mt Isa</option>
-								<option value="Newcastle">Newcastle</option>
-								<option value="Perth">Perth</option>
-								<option value="Pt Augusta">Pt Augusta</option>
-								<option value="Rockhampton">Rockhampton</option>
-								<option value="Sydney">Sydney</option>
-	 	  				</select>
+	 	  				<input id="origin">
 	 	  			</td>
 	 	  		</tr>
 	 	  		
 	 	  		<tr>
 	 	  			<td width="120px">Enter Destination:</td>
 	 	  			<td>
-	 	  				<select>
-	 	  					<option value="Albany">Albany</option>
-								<option value="Alice Springs">Alice Springs</option>
-								<option value="Bendigo">Bendigo</option>
-								<option value="Brisbane">Brisbane</option>
-								<option value="Broken Hill">Broken Hill</option>
-								<option value="Broome">Broome</option>
-								<option value="Cairns">Cairns</option>
-								<option value="Canberra">Canberra</option>
-								<option value="Darwin">Darwin</option>
-								<option value="Hobart">Hobart</option>
-								<option value="Kalgoorlie">Kalgoorlie</option>
-								<option value="Launceston">Launceston</option>
-								<option value="Melbourne">Melbourne</option>
-								<option value="Mt Isa">Mt Isa</option>
-								<option value="Newcastle">Newcastle</option>
-								<option value="Perth">Perth</option>
-								<option value="Pt Augusta">Pt Augusta</option>
-								<option value="Rockhampton">Rockhampton</option>
-								<option value="Sydney">Sydney</option>
-	 	  				</select>
+	 	  				<input id="destination">
 	 	  			</td>
 	 	  		</tr>
 	 	  	</table>
