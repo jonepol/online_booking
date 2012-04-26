@@ -25,3 +25,16 @@
 	background-color:#CCC;
 }
 
+.fieldlabel{
+   text-align:right;
+   vertical-align:top;
+   font-weight:500;
+ }
+
+.compulsory{ 
+	color:red;
+}
+
+.half-compulsory{ 
+	color:orange;
+	}
