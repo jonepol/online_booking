@@ -89,7 +89,7 @@ function personal_Detail_Validation()
 	}
 	else 
 	{
-		return true
+		return true;
 	}
 	
 }
