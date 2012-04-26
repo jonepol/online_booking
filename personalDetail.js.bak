@@ -1,4 +1,4 @@
-function personal_Detail_Validation()
+function personal_detail_validation()
 {
 	//email address regular expression 
     var emailReg = /^\w{1,15}(?:@(?!-))(?:(?:[a-z0-9-]*)(?:[a-z0-9](?!-))(?:\.(?!-)))+[a-z]{2,4}$/;

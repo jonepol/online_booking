@@ -10,7 +10,7 @@
 	 <body>
 	 	  <?php include("menu.inc") ?>
 	 	  <div id="content">
-	 	  	<form name="personDetail" method="POST" onsubmit="return personal_Detail_Validation()" action="payment.php">
+	 	  	<form name="personDetail" method="POST" onsubmit="return personal_detail_alidation()" action="payment.php">
 	 			<table>
 	 				<tr>
 						<td class="fieldlabel">Given Name:<span class="compulsory"> *</span></td>
@@ -29,7 +29,7 @@
 						<td><input type="text" name="address2" id="address2"></td>
 					</tr>
 	 				<tr>
-						<td class="fieldlabel">Suburb:<span class="half-compulsory"> *</span></td>
+						<td class="fieldlabel">Suburb:<span class="compulsory"> *</span></td>
 						<td><input type="text" name="suburb" id="suburb"></td>
 					</tr>
 					<tr>

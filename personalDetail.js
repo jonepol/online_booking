@@ -10,6 +10,7 @@ function personal_detail_validation()
 	   || document.getElementById("familyName").value == ""
 	   || document.getElementById("address1").value == ""
 	   || document.getElementById("country").value == ""
+	   || document.getElementById("suburb").value =="" 
 	   || document.getElementById("emailAddress").value == "")
 	{
 		alert("One or more compulsory fields is blank");
@@ -20,9 +21,7 @@ function personal_detail_validation()
 	{   
 		var postcode = document.getElementById("postcode").value;
 
-		if(document.getElementById("suburb").value =="" 
-		   || document.getElementById("state").value == ""
-		   || postcode == "")
+		if(document.getElementById("state").value == "" || postcode == "")
 		{
 			alert("One or more compulsory fields is blank");
 			return false;
