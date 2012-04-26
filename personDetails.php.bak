@@ -38,7 +38,7 @@
 					</tr>
 	 				<tr>
 						<td class="fieldlabel">Postcode:</td>
-						<td><input type="text" id="postCode"><span class="half-compulsory"> *</span></td>
+						<td><input type="text" id="postcode"><span class="half-compulsory"> *</span></td>
 					</tr>
 	 				<tr>
 						<td class="fieldlabel">Country:</td>

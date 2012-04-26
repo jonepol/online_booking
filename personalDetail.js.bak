@@ -1,31 +1,3 @@
-window.onload = initAll;
-var ajax=false;
-
-function initAll()
-{
-   if (window.XMLHttpRequest)
-   {
-      ajax = new XMLHttpRequest();
-   }
-   else if (window.ActiveXObject)
-   {
-		try  
-		{
-			ajax = new ActiveXObject("Msxml2.XMLHTTP");
-        }
-		catch(e1)
-		{
-			try { ajax = new ActiveXObject("Microsoft.XMLHTTP"); } 
-			catch(e2) {}
-		}
-   }
-
-   if (!ajax) {
-      alert("Some page functionality is not available");
-   }
-}
-
-
 function personal_Detail_Validation()
 {
 	//email address regular expression 
@@ -69,7 +41,7 @@ function personal_Detail_Validation()
 		alert("Please enter a valid email address");
 		return false;
 	}
-	else if (document.getElementById("mobilePhone").value !="" && !phoneReg.test(document.getElementById("businessPhone").value))
+	else if (document.getElementById("mobilePhone").value !="" && !phoneReg.test(document.getElementById("mobilePhone").value))
 	{
 		alert("Please enter a valid phone number");
 		document.getElementById("mobilePhone").value = "";
@@ -81,10 +53,10 @@ function personal_Detail_Validation()
 		document.getElementById("businessPhone").value = "";
 		return false;
 	}
-	else if (document.getElementById("workingPhone").value !="" && !phoneReg.test(document.getElementById("businessPhone").value))
+	else if (document.getElementById("workPhone").value !="" && !phoneReg.test(document.getElementById("workPhone").value))
 	{
 		alert("Please enter a valid phone number");
-		document.getElementById("workingPhone").value = "";
+		document.getElementById("workPhone").value = "";
 		return false;
 	}
 	else 
@@ -92,15 +64,4 @@ function personal_Detail_Validation()
 		return true;
 	}
 	
-}
-
-function clearOtherCheckbox(checkedBox, allCheckbox)
-{
-	for (i = 0; i < allCheckbox.length; i++)
-	{
-		if (allCheckbox[i] != checkedBox)
-		{
-			allCheckbox[i].checked = false;
-		}
-	}
 }
