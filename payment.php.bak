@@ -3,18 +3,58 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel="stylesheet" type="text/css" href="defaul.css">
+	 	 <link rel="stylesheet" type="text/css" href="default.css">
+		 <script type="text/javascript" src="payment.js"></script>
 	 </head>
 	
 	<body>
-		<?php include("menu.php") ?>
+		<?php include("menu.inc") ?>
 		<div id="content">
-			<p>personal detail goes here</p>
-		
-		<form name="paymentDetail" method="POST">
+			<p><h4>Personal Details Review<h4></p>
+		    <table>
+			    <?php
+				    //prints give name 
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Given Name:</td><td>" .$_REQUEST['givenName']. "</td>\n";
+					print "</tr>\n";
+                    //prints family name
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Family Name:</td><td>" .$_REQUEST['familyName']. "</td>\n";
+					print "</tr>\n";
+                    //prints address details
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Address:</td><td>" .$_REQUEST['address1']. "," . $_REQUEST['address2']."</td>\n";
+					print "</tr>\n";
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\"></td><td>" .$_REQUEST['suburb']."</td>\n";
+					print "</tr>\n";
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\"></td><td>" .$_REQUEST['state']. "  " . $_REQUEST['postcode']. "</td>\n";
+					print "</tr>\n";
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\"></td><td>" .$_REQUEST['country']. "</td>\n";
+					print "</tr>\n";
+					//prints email address
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Email:</td><td>" .$_REQUEST['emailAddress']. "</td>\n";
+					print "</tr>\n";
+					//prints  mobile phone
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Mobile Phone:</td><td>" .$_REQUEST['mobilePhone']. "</td>\n";
+					print "</tr>\n";
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Work Phone:</td><td>" .$_REQUEST['workPhone']. "</td>\n";
+					print "</tr>\n";
+					print "<tr>\n";
+					print "\t<td class=\"fieldlabel\">Business Phone:</td><td>" .$_REQUEST['businessPhone']. "</td>\n";
+					print "</tr>\n";
+				?>
+			<table>
+		<p><h4>Payment Details <h4></p>
+		<form name="paymentDetail" method="POST" onsubmit="return payment_validation()" action="reviewDetail.php">
 			<table>
 				<tr>
-					<td>Credit Card Type*: </td>
+					<td class="fieldlabel">Credit Card Type: <span class="compulsory"> *</span></td>
 					<td>
 						<select>
 							<Option>Visa</Option>
@@ -25,36 +65,36 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Credit Card Number*: </td>
-					<td><input name="creditCardNo"/></td>
+					<td class="fieldlabel">Credit Card Number: <span class="compulsory"> *</span></td>
+					<td><input  id="creditCardNo" name="creditCardNo"/></td>
 				</tr>
 				<tr>
-					<td>Name on Credit Card*: </td>
-					<td><input name="ownerName"/></td>
+					<td class="fieldlabel">Name on Credit Card: <span class="compulsory"> *</span></td>
+					<td><input  id="ownerName" name="ownerName"/></td>
 				</tr>
 				<tr>
-					<td>Expiry Date*: </td>
+					<td class="fieldlabel">Expiry Date: <span class="compulsory"> *</span></td>
 					<td>
-						<select>
-							<Option>01</Option>
-							<Option>02</Option>
-							<Option>03</Option>
-							<Option>04</Option>
-							<Option>05</Option>
-							<Option>06</Option>
-							<Option>07</Option>
-							<Option>08</Option>
-							<Option>09</Option>
-							<Option>10</Option>
-							<Option>11</Option>
-							<Option>12</Option>
+						<select name="expiryMonth" id="expiryMonth">
+							<Option value = 1>01</Option>
+							<Option value = 2>02</Option>
+							<Option value = 3>03</Option>
+							<Option value = 4>04</Option>
+							<Option value = 5>05</Option>
+							<Option value = 6>06</Option>
+							<Option value = 7>07</Option>
+							<Option value = 8>08</Option>
+							<Option value = 9>09</Option>
+							<Option value = 10>10</Option>
+							<Option value = 11>11</Option>
+							<Option value = 12>12</Option>
 						</select>
-						<input name="expiryYear" maxlength="2" size="2"/>
+						<input id="expiryYear" name="expiryYear" maxlength="4" size="4"/>
 					</td>
 				</tr>
 				<tr>
-					<td>Security Code*: </td>
-					<td><input name="securityCode" maxlength="3" size="3"/></td>
+					<td class="fieldlabel">Security Code: <span class="compulsory"> *</span></td>
+					<td><input id="securityCode" name="securityCode" maxlength="3" size="3"/></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" value="Stage 3 - Review Bookings and Details"/></td>
@@ -64,7 +104,7 @@
 	 </div>
 	 <div id="information">
 	 </div>
-	 <?php include("footer.php") ?>
+	 <?php include("footer.inc") ?>
 	</body>
 	 
 </html>
