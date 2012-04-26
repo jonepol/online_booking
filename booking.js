@@ -81,3 +81,14 @@ function personal_Detail_Validation()
 	}
 	
 }
+
+function clearOtherCheckbox(checkedBox, allCheckbox)
+{
+	for (i = 0; i < allCheckbox.length; i++)
+	{
+		if (allCheckbox[i] != checkedBox)
+		{
+			allCheckbox[i].checked = false;
+		}
+	}
+}

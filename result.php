@@ -44,7 +44,7 @@
 			
 			?>
 			
-			<form id="selectFlight" name="slectFlight" method="POST" action="booking.php">
+			<form id="selectFlight" name="selectFlight" method="POST" action="booking.php">
 			<table border=0>
 			<tr>
 			<td>From</td>
@@ -57,7 +57,8 @@
 					 print "<tr>\n";
 					 print "\t<td>$a_row[from_city]</td>\n";
 					 print "\t<td>$a_row[to_city]</td>\n";
-					 print "\t<td><input name=\"flight_no\" value=\"$a_row[route_no]\" type=\"checkbox\"></td>\n";
+					 print "\t<td><input name=\"flight_no\" value=\"$a_row[route_no]\" type=\"checkbox\"
+							onClick=\"clearOtherCheckbox(this, document.selectFlight.flight_no)\"></td>\n";
 					 print "</tr>\n";
 				}
 				print "</table>\n";
