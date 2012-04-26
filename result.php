@@ -12,7 +12,7 @@
 	 	  	<?php
 			require_once "db_setting.inc";
 			
-			$dbc = new mysqli(DB_HOST, DB_QUERY_USER, DB_QUERY_PASS, POTI_DB);
+			$dbc = new mysqli(DB_HOST_HOME, DB_QUERY_USER, DB_QUERY_PASS, POTI_DB);
 			if (mysqli_connect_errno()) {
 				echo "Connect Failed<br>";
 				exit;

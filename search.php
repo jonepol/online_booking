@@ -1,5 +1,33 @@
 <!DCOTYPE html PUBLIC "-//W3C//DTD HTML 4.01/EN"
   "http://www.w3.org/TR/html4/strict.dtd">
+<?php
+require_once "db_setting.inc";
+
+$dbc = new mysqli(DB_HOST_HOME, DB_QUERY_USER, DB_QUERY_PASS, POTI_DB);
+if (mysqli_connect_errno()) {
+	echo "Connect Failed<br>";
+	exit;
+}
+
+$origin_query = "select distinct from_city from flights order by from_city;";
+$destination_query = "select distinct to_city from flights order by to_city;";
+
+$origin_result = $dbc->query($origin_query);
+$destination_result = $dbc->query($destination_query);
+
+$origin_options = "";
+$destination_options = "";
+
+while ($o_row = $origin_result->fetch_assoc()) {
+	$origin_options .= "<option value=\"$o_row[from_city]\">$o_row[from_city]</option>";
+}
+
+while ($o_row = $destination_result->fetch_assoc()) {
+	$destination_options .= "<option value=\"$o_row[to_city]\">$o_row[to_city]</option>";
+}
+
+?>  
+
 <html>
 	<head>
 	 	 <title>Online Travel Agency</title>
@@ -8,20 +36,25 @@
 	 </head>
 	 <body>
 	 	  <?php include("menu.inc") ?>
+		  
 	 	  <div id="content">
 	 	  	<form id="searchForm" method="POST" action="result.php">
 	 	  	<table>
 	 	  		<tr>
 	 	  			<td width="120px">Enter Origin:</td>
 	 	  			<td>
-	 	  				<input id="origin" name="origin">
+						<select id="origin" name="origin">
+							<?php echo $origin_options; ?>
+	 	  				</select>
 	 	  			</td>
 	 	  		</tr>
 	 	  		
 	 	  		<tr>
 	 	  			<td width="120px">Enter Destination:</td>
 	 	  			<td>
-	 	  				<input id="destination" name="destination">
+	 	  				<select id="destination" name="destination">
+							<?php echo $destination_options; ?>
+	 	  				</select>
 	 	  			</td>
 	 	  		</tr>
 	 	  	</table>
