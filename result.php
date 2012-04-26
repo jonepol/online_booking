@@ -25,11 +25,11 @@
 			$origin = $_REQUEST['origin'];
 			$destination = $_REQUEST['destination'];
 			
-			if ($origin != "" || $destination != "") {
-				if ($destination == "") {
+			if ($origin != "select" || $destination != "select") {
+				if ($destination == "select") {
 					$query_string = "select * from flights where from_city='".$origin."';";
 				}
-				else if ($origin == "") {
+				else if ($origin == "select") {
 					$query_string = "select * from flights where to_city='".$destination."';";
 				}
 				else {
@@ -44,6 +44,7 @@
 			
 			?>
 			
+			<form id="selectFlight" name="slectFlight" method="POST" action="booking.php">
 			<table border=0>
 			<tr>
 			<td>From</td>
@@ -56,12 +57,13 @@
 					 print "<tr>\n";
 					 print "\t<td>$a_row[from_city]</td>\n";
 					 print "\t<td>$a_row[to_city]</td>\n";
-					 print "\t<td><input type=\"checkbox\"></td>\n";
+					 print "\t<td><input name=\"flight_no\" value=\"$a_row[route_no]\" type=\"checkbox\"></td>\n";
 					 print "</tr>\n";
 				}
 				print "</table>\n";
 				print "<a href=\"search.php\"><input type=\"submit\" value=\"<New Search\"></a>\n";
-				print "<a href=\"booking.php\"><input type=\"submit\" value=\"Make Booking for Selected Flight\"></a>\n";
+				print "<input type=\"submit\" value=\"Make Booking for Selected Flight\">\n";
+				print "</form>";
 			}
 			else {
 				print "no result\n";

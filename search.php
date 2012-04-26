@@ -18,12 +18,12 @@ $destination_result = $dbc->query($destination_query);
 $origin_options = "";
 $destination_options = "";
 
-while ($o_row = $origin_result->fetch_assoc()) {
-	$origin_options .= "<option value=\"$o_row[from_city]\">$o_row[from_city]</option>";
+while ($a_row = $origin_result->fetch_assoc()) {
+	$origin_options .= "<option value=\"$a_row[from_city]\">$a_row[from_city]</option>";
 }
 
-while ($o_row = $destination_result->fetch_assoc()) {
-	$destination_options .= "<option value=\"$o_row[to_city]\">$o_row[to_city]</option>";
+while ($a_row = $destination_result->fetch_assoc()) {
+	$destination_options .= "<option value=\"$a_row[to_city]\">$a_row[to_city]</option>";
 }
 
 ?>  
@@ -44,6 +44,7 @@ while ($o_row = $destination_result->fetch_assoc()) {
 	 	  			<td width="120px">Enter Origin:</td>
 	 	  			<td>
 						<select id="origin" name="origin">
+							<option value="select">Select</option>
 							<?php echo $origin_options; ?>
 	 	  				</select>
 	 	  			</td>
@@ -53,6 +54,7 @@ while ($o_row = $destination_result->fetch_assoc()) {
 	 	  			<td width="120px">Enter Destination:</td>
 	 	  			<td>
 	 	  				<select id="destination" name="destination">
+							<option value="select">Select</option>
 							<?php echo $destination_options; ?>
 	 	  				</select>
 	 	  			</td>
