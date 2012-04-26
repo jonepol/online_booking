@@ -31,7 +31,7 @@ function personal_Detail_Validation()
 	//email address regular expression 
     var emailReg = /^\w{1,15}(?:@(?!-))(?:(?:[a-z0-9-]*)(?:[a-z0-9](?!-))(?:\.(?!-)))+[a-z]{2,4}$/;
 	var postcodeReg = /[0-9]{4}/; // postcode regular expression 
-	var phoneReg = /[0-9]{0,20}/; //mobile regular expression
+	var phoneReg = /[0-9]{1,20}/; //mobile regular expression
 
 	//check if the compulsory fileds are filled
 	if(document.getElementById("givenName").value == ""
@@ -69,10 +69,22 @@ function personal_Detail_Validation()
 		alert("Please enter a valid email address");
 		return false;
 	}
-	else if (!phoneReg.test(document.getElementById("businessPhone").value))
+	else if (document.getElementById("mobilePhone").value !="" && !phoneReg.test(document.getElementById("businessPhone").value))
+	{
+		alert("Please enter a valid phone number");
+		document.getElementById("mobilePhone").value = "";
+		return false;
+	}
+	else if (document.getElementById("businessPhone").value !="" && !phoneReg.test(document.getElementById("businessPhone").value))
 	{
 		alert("Please enter a valid phone number");
 		document.getElementById("businessPhone").value = "";
+		return false;
+	}
+	else if (document.getElementById("workingPhone").value !="" && !phoneReg.test(document.getElementById("businessPhone").value))
+	{
+		alert("Please enter a valid phone number");
+		document.getElementById("workingPhone").value = "";
 		return false;
 	}
 	else 
