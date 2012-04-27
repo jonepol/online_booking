@@ -1,5 +1,28 @@
 <!DCOTYPE html PUBLIC "-//W3C//DTD HTML 4.01/EN"
   "http://www.w3.org/TR/html4/strict.dtd">
+<?php
+	session_start();
+    
+	//clears previous personal detail 
+	if(!isset($_SESSION['personalDetail'])){
+		unset($_SESSION['personalDetail']);
+	}
+	//get current personal detail 
+	$personalDetail = array('givenName' => $_REQUEST['givenName'], 
+	                        'familyName' => $_REQUEST['familyName'],
+							'address' => $_REQUEST['address1'] . "," .$_REQUEST['address2'],
+							'suburb' => $_REQUEST['suburb'],
+							'state' => $_REQUEST['state'] . " "  . $_REQUEST['postcode'] ,
+							'country' => $_REQUEST['country'],
+							'emailAddress' =>  $_REQUEST['emailAddress'],
+							'mobilePhone' =>  $_REQUEST['mobilePhone'],
+							'workPhone' => $_REQUEST['workPhone'],
+							'businessPhone' => $_REQUEST['businessPhone']
+							);
+    
+	//stores current persona detail into session
+	$_SESSION['personalDetail'] = $personalDetail;
+?>
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
@@ -15,41 +38,40 @@
 			    <?php
 				    //prints give name 
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Given Name:</td><td>" .$_REQUEST['givenName']. "</td>\n";
+					print "\t<td class=\"fieldlabel\">Given Name:</td><td>" .$personalDetail['givenName']. "</td>\n";
 					print "</tr>\n";
                     //prints family name
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Family Name:</td><td>" .$_REQUEST['familyName']. "</td>\n";
+					print "\t<td class=\"fieldlabel\">Family Name:</td><td>" .$personalDetail['familyName']. "</td>\n";
 					print "</tr>\n";
                     //prints address details
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Address:</td><td>" .$_REQUEST['address1']. "," . $_REQUEST['address2']."</td>\n";
+					print "\t<td class=\"fieldlabel\">Address:</td><td>" .$personalDetail['address']."</td>\n";
 					print "</tr>\n";
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\"></td><td>" .$_REQUEST['suburb']."</td>\n";
+					print "\t<td class=\"fieldlabel\"></td><td>" .$personalDetail['suburb']."</td>\n";
 					print "</tr>\n";
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\"></td><td>" .$_REQUEST['state']. "  " . $_REQUEST['postcode']. "</td>\n";
+					print "\t<td class=\"fieldlabel\"></td><td>" .$personalDetail['state']."</td>\n";
 					print "</tr>\n";
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\"></td><td>" .$_REQUEST['country']. "</td>\n";
+					print "\t<td class=\"fieldlabel\"></td><td>" .$personalDetail['country']. "</td>\n";
 					print "</tr>\n";
 					//prints email address
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Email:</td><td>" .$_REQUEST['emailAddress']. "</td>\n";
+					print "\t<td class=\"fieldlabel\">Email:</td><td>" .$personalDetail['emailAddress']. "</td>\n";
 					print "</tr>\n";
 					//prints  mobile phone
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Mobile Phone:</td><td>" .$_REQUEST['mobilePhone']. "</td>\n";
+					print "\t<td class=\"fieldlabel\">Mobile Phone:</td><td>" .$personalDetail['mobilePhone']. "</td>\n";
 					print "</tr>\n";
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Work Phone:</td><td>" .$_REQUEST['workPhone']. "</td>\n";
+					print "\t<td class=\"fieldlabel\">Work Phone:</td><td>" .$personalDetail['workPhone']. "</td>\n";
 					print "</tr>\n";
 					print "<tr>\n";
-					print "\t<td class=\"fieldlabel\">Business Phone:</td><td>" .$_REQUEST['businessPhone']. "</td>\n";
-					print "</tr>\n";
+					print "\t<td class=\"fieldlabel\">Business Phone:</td><td>" .$personalDetail['businessPhone']. "</td>\n";
 				?>
-			<table>
+			</table>
 		<p><h4>Payment Details <h4></p>
 		<form name="paymentDetail" method="POST" onsubmit="return payment_validation()" action="reviewDetail.php">
 			<table>
