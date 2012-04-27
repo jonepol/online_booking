@@ -3,13 +3,18 @@
 <?php
 	 session_start();
 	 
+	 //gets personal details and booked flights detail
+	 //from seesion
 	 $personalDetail = $_SESSION['personalDetail'];
 	 $booked_flights = $_SESSION['booked_flights'];
-
+	 $total_price = 0;
+      
+	  //sends booking detail to user' email address 
 	 $to = $personalDetail['emailAddress'];
 	 $subject="Flight Booking Confirmation";
 	 $headers  = 'MIME-Version: 1.0' . "\r\n";
      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	 $headers .= 'From: bentony.flight@uts.edu.au' . "\r\n";
 	 $body = "<html>
 			<p>Your Booking has been approved</p>
 			<p>Following is the detail of you booking.</p>
@@ -68,9 +73,19 @@
 								."\t<td>$flight[special_diet]</td>"
 								."\t<td>$flight[price]</td>"
 							."</tr>\n";
+					 $total_price =  $total_price +(int)$flight['price'];
 				}
-		
-       $body .="</table>\n</html>";
+       $body .="</table>\n"
+	             ."<p><h5>Total Price:$" . $total_price. "</h5></p>"
+				 ."<p>Have a good trip!</p>"
+	           ."</html>";
+	mail($to,$subject,$body,$headers);
+    
+	//clears personalDetail and booked flight 
+	//detail from session
+	unset($_SESSION['personalDetail']);
+	unset($_SESSION['booked_flights']);
+
 ?>
 <html>
 	 <head>

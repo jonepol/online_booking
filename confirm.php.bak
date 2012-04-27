@@ -3,12 +3,18 @@
 <?php
 	 session_start();
 	 
+	 //gets personal details and booked flights detail
+	 //from seesion
 	 $personalDetail = $_SESSION['personalDetail'];
-
+	 $booked_flights = $_SESSION['booked_flights'];
+	 $total_price = 0;
+      
+	  //sends booking detail to user' email address 
 	 $to = $personalDetail['emailAddress'];
 	 $subject="Flight Booking Confirmation";
 	 $headers  = 'MIME-Version: 1.0' . "\r\n";
      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	 $headers .= 'From: bentony.flight@uts.edu.au' . "\r\n";
 	 $body = "<html>
 			<p>Your Booking has been approved</p>
 			<p>Following is the detail of you booking.</p>
@@ -55,17 +61,31 @@
 							<td>Wheel Chair</td>
 							<td>Special Diet</td>
 							<td>Price</td>
-				</tr>"
-			."</table>\n"
-		."</html>";
-	  if (mail($to, $subject, $body, $headers))
-	  {
-		echo("<p>Message successfully sent!</p>");
-	  } 
-	  else
-	  {
-	   echo("<p>Message delivery failed...</p>");
-	  }
+				</tr>";
+				foreach ($booked_flights as $flight)
+				{
+					$body .="<tr>\n"
+								."\t<td>$flight[flight_no]</td>"
+								."\t<td>$flight[origin]</td>"
+								."\t<td>$flight[destination]</td>"
+								."\t<td>$flight[child]</td>"
+								."\t<td>$flight[wheelchair]</td>"
+								."\t<td>$flight[special_diet]</td>"
+								."\t<td>$flight[price]</td>"
+							."</tr>\n";
+					 $total_price =  $total_price +(int)$flight['price'];
+				}
+       $body .="</table>\n"
+	             ."<p><h5>Total Price:$" . $total_price. "</h5></p>"
+				 ."<p>Have a good trip!</p>"
+	           ."</html>";
+	mail($to,$subject,$body,$headers);
+    
+	//clears personalDetail and booked flight 
+	//detail from session
+	unset($_SESSION['personalDetail']);
+	unset($_SESSION['booked_flights'];)
+
 ?>
 <html>
 	 <head>
