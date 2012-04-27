@@ -37,29 +37,13 @@
 	 <head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+		 <script src="booking.js" type="text/javascript"></script>
 	 </head>
-   <script type="text/javascript">
-   	 function enableSeatType(row){
-   	 	 if(document.getElementById("seat" + row).checked == true){
-   	 	 	 document.getElementById("child" + row).disabled = false;
-   	 	 	 document.getElementById("wheelchair" + row).disabled = false;
-   	 	 	 document.getElementById("specialDiet" + row).disabled = false;
-   	   }else{
-   	   	 document.getElementById("child" + row).disabled = true;
-   	 	 	 document.getElementById("wheelchair" + row).disabled = true;
-   	 	 	 document.getElementById("specialDiet" + row).disabled = true;
-   	 	 	 document.getElementById("child" + row).checked = false;
-   	 	 	 document.getElementById("wheelchair" + row).checked = false;
-   	 	 	 document.getElementById("specialDiet" + row).checked = false;
-   	   }
-   	 }
-   	 
-   </script>
 	 <body>
 	 	 <?php include("menu.inc") ?>
 	 	 <div id="content">
 	 	 		<p>Flight Detail:</p>
-	   <form name="seats" method="POST" action="bookingReview.php">
+	   <form name="seats" method="POST" action="bookingReview.php" onSubmit="return isSelected()">
 		<table>
 			<tr>
 				<td>Flight No: </td>

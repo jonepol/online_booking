@@ -8,7 +8,7 @@ $new_flight = $_SESSION['new_flight'];
 
 if (!isset($_SESSION['booked_flights']))
 {
-	$booked_flights = array($new_flight);
+	$booked_flights = array();
 }
 else
 {								   
@@ -18,10 +18,7 @@ else
 $seats = $_REQUEST['seats'];
 
 for ($i = 0; $i < count($seats); $i++)
-{
-	
-	
-	
+{	
 	if (isset($_REQUEST['seatType'.$seats[$i]]))
 	{
 		$seat_type = $_REQUEST['seatType'.$seats[$i]];
@@ -46,7 +43,7 @@ for ($i = 0; $i < count($seats); $i++)
 }
 
 $_SESSION['booked_flights'] = $booked_flights;
-
+unset($_SESSION['new_flight']);
 
 ?>  
 
@@ -58,35 +55,36 @@ $_SESSION['booked_flights'] = $booked_flights;
 	<body>
 		<?php include("menu.inc") ?>
 		<div id="content">
-			<form>
-				<table>
-					<tr>
-						<td>Flight No</td>
-						<td>From City</td>
-						<td>To City</td>
-						<td>Child</td>
-						<td>Wheel Chair</td>
-						<td>Special Diet</td>
-						<td>Price</td>
-					</tr>
-					<?php
-					
-					foreach ($booked_flights as $flight)
-					{
-						print "<tr>\n";
-						print "\t<td>$flight[flight_no]</td>";
-						print "\t<td>$flight[origin]</td>";
-						print "\t<td>$flight[destination]</td>";
-						print "\t<td>$flight[child]</td>";
-						print "\t<td>$flight[wheelchair]</td>";
-						print "\t<td>$flight[special_diet]</td>";
-						print "\t<td>$flight[price]</td>";
-						print "</tr>\n";
-					}
-					
-					?>
-				</table>
-			</form>
+			<table>
+				<tr>
+					<td>Flight No</td>
+					<td>From City</td>
+					<td>To City</td>
+					<td>Child</td>
+					<td>Wheel Chair</td>
+					<td>Special Diet</td>
+					<td>Price</td>
+				</tr>
+				<?php
+				
+				foreach ($booked_flights as $flight)
+				{
+					print "<tr>\n";
+					print "\t<td>$flight[flight_no]</td>";
+					print "\t<td>$flight[origin]</td>";
+					print "\t<td>$flight[destination]</td>";
+					print "\t<td>$flight[child]</td>";
+					print "\t<td>$flight[wheelchair]</td>";
+					print "\t<td>$flight[special_diet]</td>";
+					print "\t<td>$flight[price]</td>";
+					print "</tr>\n";
+				}
+				
+				?>
+			</table>
+			<a href="search.php"><input type="button" value="Book More Flights"></a>
+			<a href=""><input type="button" value="Clear All Booked Flights"></a>
+			<a href="personalDetails.php"><input type="button" value="Proceed to Checkout"></a>
 		</div>
 	 	<div id="information">
 	 	</div>

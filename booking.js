@@ -94,3 +94,35 @@ function personal_Detail_Validation()
 	
 }
 
+function enableSeatType(row)
+{
+	if(document.getElementById("seat" + row).checked == true)
+	{
+		document.getElementById("child" + row).disabled = false;
+		document.getElementById("wheelchair" + row).disabled = false;
+		document.getElementById("specialDiet" + row).disabled = false;
+	}
+	else
+	{
+		document.getElementById("child" + row).disabled = true;
+		document.getElementById("wheelchair" + row).disabled = true;
+		document.getElementById("specialDiet" + row).disabled = true;
+		document.getElementById("child" + row).checked = false;
+		document.getElementById("wheelchair" + row).checked = false;
+		document.getElementById("specialDiet" + row).checked = false;
+   }
+}
+
+function isSelected()
+{
+	var checkbox = document.getElementsByName("seats[]");
+	for (var i = 0; i < checkbox.length; i++)
+	{
+		if (checkbox[i].checked == true)
+		{
+			return true;
+		}
+	}
+	alert("Please select at least one seat.");
+	return false;
+}
