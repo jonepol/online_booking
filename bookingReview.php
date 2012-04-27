@@ -20,27 +20,32 @@ for ($i = 0; $i < count($seats); $i++)
 	
 	$new_flight = $_SESSION['new_flight'];
 	
-	$seat_type = $_REQUEST['seatType'.$seats[$i]];
-	for ($k = 0; $k < count($seat_type); $k++)
+	if (isset($_REQUEST['seatType'.$seats[$i]]))
 	{
-		if ($seat_type[$k] == "child")
+		$seat_type = $_REQUEST['seatType'.$seats[$i]];
+		
+		for ($k = 0; $k < count($seat_type); $k++)
 		{
-			$new_flight['child'] = "YES";
-		}
-		if ($seat_type[$k] == "wheelchair")
-		{
-			$new_flight['wheelchair'] = "YES";
-		}
-		if ($seat_type[$k] == "specialDiet")
-		{
-			$new_flight['special_diet'] = "YES";
+			if ($seat_type[$k] == "child")
+			{
+				$new_flight['child'] = "YES";
+			}
+			if ($seat_type[$k] == "wheelchair")
+			{
+				$new_flight['wheelchair'] = "YES";
+			}
+			if ($seat_type[$k] == "specialDiet")
+			{
+				$new_flight['special_diet'] = "YES";
+			}
 		}
 	}
 	array_push($booked_flights, $new_flight);
 }
 
 $_SESSION['booked_flights'] = $booked_flights;
-print_r($booked_flights);
+
+
 ?>  
 
 <html>
@@ -62,6 +67,22 @@ print_r($booked_flights);
 						<td>Special Diet</td>
 						<td>Price</td>
 					</tr>
+					<?php
+					
+					foreach ($booked_flights as $flight)
+					{
+						print "<tr>\n";
+						print "\t<td>$flight[flight_no]</td>";
+						print "\t<td>$flight[origin]</td>";
+						print "\t<td>$flight[destination]</td>";
+						print "\t<td>$flight[child]</td>";
+						print "\t<td>$flight[wheelchair]</td>";
+						print "\t<td>$flight[special_diet]</td>";
+						print "\t<td>$flight[price]</td>";
+						print "</tr>\n";
+					}
+					
+					?>
 				</table>
 			</form>
 		</div>

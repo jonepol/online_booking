@@ -4,7 +4,7 @@
 	<head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link rel="stylesheet" type="text/css" href="default.css">
-		 <script src="booking.js" type="text/javascript"></script>
+		 <script src="result.js" type="text/javascript"></script>
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>
@@ -44,7 +44,7 @@
 			
 			?>
 			
-			<form id="selectFlight" name="selectFlight" method="POST" action="booking.php">
+			<form id="selectFlight" name="selectFlight" method="POST" action="booking.php" onSubmit="return isSelected()">
 			<table border=0>
 			<tr>
 			<td>From</td>
@@ -57,12 +57,12 @@
 					 print "<tr>\n";
 					 print "\t<td>$a_row[from_city]</td>\n";
 					 print "\t<td>$a_row[to_city]</td>\n";
-					 print "\t<td><input name=\"flight_no\" value=\"$a_row[route_no]\" type=\"checkbox\"
-							onClick=\"clearOtherCheckbox(this, document.selectFlight.flight_no)\"></td>\n";
+					 print "\t<td><input name=\"flightNo\" value=\"$a_row[route_no]\" type=\"checkbox\"
+							onClick=\"clearOtherCheckbox(this)\"></td>\n";
 					 print "</tr>\n";
 				}
 				print "</table>\n";
-				print "<a href=\"search.php\"><input type=\"submit\" value=\"<New Search\"></a>\n";
+				print "<a href=\"search.php\"><input type=\"button\" value=\"<New Search\")\"></a>\n";
 				print "<input type=\"submit\" value=\"Make Booking for Selected Flight\">\n";
 				print "</form>";
 			}

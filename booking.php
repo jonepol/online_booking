@@ -10,7 +10,7 @@
 				exit;
 			}
 	
-	$flight_no = $_REQUEST['flight_no'];
+	$flight_no = $_REQUEST['flightNo'];
 	
 	$query_string = "select * from flights where route_no='".$flight_no."';";
 	$result = $dbc->query($query_string);
