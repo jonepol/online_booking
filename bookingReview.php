@@ -18,7 +18,7 @@ else
 $seats = $_REQUEST['seats'];
 
 for ($i = 0; $i < count($seats); $i++)
-{	
+{
 	if (isset($_REQUEST['seatType'.$seats[$i]]))
 	{
 		$seat_type = $_REQUEST['seatType'.$seats[$i]];
