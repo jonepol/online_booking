@@ -57,6 +57,9 @@
 					print "</tr>\n";
 				?>
 			</table>
+			<form  method="POST" action="confrim.php">
+				<input type="submit" value="Stage 4-Confirm Payment" />
+			</form>
 	 	</div>
 
 	 	<div id="information">

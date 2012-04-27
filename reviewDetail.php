@@ -57,7 +57,7 @@
 					print "</tr>\n";
 				?>
 			</table>
-			<form>
+			<form  method="POST" action="confirm.php">
 				<input type="submit" value="Stage 4-Confirm Payment" />
 			</form>
 	 	</div>
