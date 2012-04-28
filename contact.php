@@ -4,20 +4,21 @@
 	 <head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+		 <script src="contact.js" type="text/javascript"></script>
 	 </head>
 	 <body>
 	 	<?php include("menu.inc"); ?>
 	 		
 	 	<div id="content">
-	 		<form>
+	 		<form method="POST" onsubmit="return contact_validation()" action ="sentemail.php">
 				<table>
 					<tr>
 						<td class="fieldlabel">Subject<span class="compulsory"> *</span></td>
-						<td><input type="text"></td>
+						<td><input id="subject" name="subject"type="text"></td>
 					</tr>
 					<tr>
 						<td class="fieldlabel">Email<span class="compulsory"> *</span></td>
-						<td><input type="text"></td>
+						<td><input id="emailAddress" name="emailAddress" type="text"></td>
 					</tr>
 					<tr>
 						<td class="fieldlabel">First Name&nbsp;&nbsp;&nbsp;</td>
@@ -32,14 +33,17 @@
 						<td><textarea name="eamilContent" id="emailContent" cols= 40 rows=8></textarea></td>
 					</tr>
 					<tr>
-						<td colspan=2 ><input type="submit" value="Contact"></td>
+						<td></td>
+						<td><input type="submit" value="Contact"></td>
 					<tr>
 				</table>
+				<input type="hidden" id="isPostBack" value="flase">
 			</form>
+			<p>Note:Your email will be sent to the website owner UTS email: <br>
+			Guotong.Zheng-1@student.uts.edu.au	
+			</p>
 	 	</div>
-	 	
-	 	<div id="information">
-	 		
+	 	<div id="information">	
 	 	</div>
 	 	<?php include("footer.inc"); ?>
 	 </body>
