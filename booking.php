@@ -37,6 +37,7 @@
 	 <head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+		 <script src="jquery-1.7.1.js" type="text/javascript"></script>
 		 <script src="booking.js" type="text/javascript"></script>
 	 </head>
 	 <body>
@@ -105,7 +106,7 @@
 	   	   </tr>
 		   <tr>
 			 <td colspan="4">Total number of seats selected:</td>
-			 <td id="numberOfSeats"></td>
+			 <td id="numberOfSeats">0</td>
 		   </tr>
 		   <tr>
 			 <td colspan="5"><input type="submit" value="Add to Bookings"></td>
