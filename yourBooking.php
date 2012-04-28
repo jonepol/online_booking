@@ -44,6 +44,7 @@ if (isset($_REQUEST['deleteFlight']))
 				   </tr>\n";
 
 			$booked_flights = $_SESSION['booked_flights'];
+			$total_price = 0.0;
 			for ($i = 0; $i < count($booked_flights); $i++)
 			{
 				if (isset($booked_flights[$i]))
@@ -58,9 +59,10 @@ if (isset($_REQUEST['deleteFlight']))
 					print "\t<td>".$booked_flights[$i]['price']."</td>";
 					print "\t<td><input name=\"deleteFlight[]\" value=\"$i\" type=\"checkbox\"</td>";
 					print "</tr>\n";
+					$total_price =  $total_price +(float)$booked_flights[$i]['price'];
 				}
 			}
-			
+			print "<tr><td colspan = 6>Total Price</td><td>".$total_price."</td></tr>";
 			print "</table>";
 			print "<input type=\"submit\" value=\"Delete Selected Flights\">";
 			print "</form>";

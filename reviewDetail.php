@@ -57,6 +57,40 @@
 					print "</tr>\n";
 				?>
 			</table>
+			<p>
+				<table>
+					<tr>
+						<td>Flight No</td>
+						<td>From City</td>
+						<td>To City</td>
+						<td>Child</td>
+						<td>Wheel Chair</td>
+						<td>Special Diet</td>
+						<td>Price</td>
+				</tr>
+				<?php
+				    $booked_flights = $_SESSION['booked_flights'];
+					$totalPrice = 0.0;
+					foreach ($booked_flights as $flight)
+					{
+						print "<tr>\n";
+						print "\t<td>$flight[flight_no]</td>";
+						print "\t<td>$flight[origin]</td>";
+						print "\t<td>$flight[destination]</td>";
+						print "\t<td>$flight[child]</td>";
+						print "\t<td>$flight[wheelchair]</td>";
+						print "\t<td>$flight[special_diet]</td>";
+						print "\t<td>$flight[price]</td>";
+						print "</tr>\n";
+						$totalPrice = $totalPrice + (float)$flight['price'];
+					}
+				?>
+				<tr>
+					<td colspan = 6>Total Price</td>
+					<td><?php echo $totalPrice ?></td>
+				</tr>
+			   </table>
+			</p>
 			<form  method="POST" action="confirm.php">
 				<input type="submit" value="Stage 4-Confirm Payment" />
 			</form>

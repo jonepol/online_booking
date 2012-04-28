@@ -84,7 +84,7 @@
 	//clears personalDetail and booked flight 
 	//detail from session
 	unset($_SESSION['personalDetail']);
-	unset($_SESSION['booked_flights'];)
+	unset($_SESSION['booked_flights']);
 
 ?>
 <html>

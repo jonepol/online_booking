@@ -88,7 +88,7 @@ unset($_SESSION['new_flight']);
 				</tr>
 			</table>
 			<a href="search.php"><input type="button" value="Book More Flights"></a>
-			<a href="deleteFlight.php"><input type="button" value="Clear All Booked Flights"></a>
+			<a href=""><input type="button" value="Clear All Booked Flights"></a>
 			<a href="personalDetails.php"><input type="button" value="Proceed to Checkout"></a>
 		</div>
 	 	<div id="information">

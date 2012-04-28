@@ -7,7 +7,7 @@
 	 //from seesion
 	 $personalDetail = $_SESSION['personalDetail'];
 	 $booked_flights = $_SESSION['booked_flights'];
-	 $total_price = 0;
+	 $total_price = 0.0;
       
 	  //sends booking detail to user' email address 
 	 $to = $personalDetail['emailAddress'];
@@ -73,7 +73,7 @@
 								."\t<td>$flight[special_diet]</td>"
 								."\t<td>$flight[price]</td>"
 							."</tr>\n";
-					 $total_price =  $total_price +(int)$flight['price'];
+					 $total_price =  $total_price +(float)$flight['price'];
 				}
        $body .="</table>\n"
 	             ."<p><h5>Total Price:$" . $total_price. "</h5></p>"
