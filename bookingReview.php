@@ -4,8 +4,6 @@
 <?php
 session_start();
 
-$new_flight = $_SESSION['new_flight'];
-
 if (!isset($_SESSION['booked_flights']))
 {
 	$booked_flights = array();
@@ -19,12 +17,14 @@ $seats = $_REQUEST['seats'];
 
 for ($i = 0; $i < count($seats); $i++)
 {
+	$new_flight = $_SESSION['new_flight'];
 	if (isset($_REQUEST['seatType'.$seats[$i]]))
 	{
 		$seat_type = $_REQUEST['seatType'.$seats[$i]];
 		
 		for ($k = 0; $k < count($seat_type); $k++)
 		{
+			
 			if ($seat_type[$k] == "child")
 			{
 				$new_flight['child'] = "YES";
