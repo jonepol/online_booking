@@ -11,22 +11,24 @@ if (isset($_REQUEST['deleteFlight']))
 	
 	for ($i = 0; $i < count($delete_flights); $i++)
 	{
-		//print $delete_flights[$i];
 		unset($booked_flights[$delete_flights[$i]]);
 	}
 	
 	$_SESSION['booked_flights'] = array_values($booked_flights);
+	$_SESSION['booked_flights'] = $booked_flights;
 }
 ?>  
 
 <html>
 	<head>
 		<title>Online Travel Agency</title>
-	 	<link rel='stylesheet' type='text/css' href='default.css'>
+	 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<?php include("menu.inc") ?>
+		<div id="main">
 		<div id="content">
+		<center>
 		<?php
 
 		if (isset($_SESSION['booked_flights']) && count($_SESSION['booked_flights']) > 0)
@@ -76,10 +78,9 @@ if (isset($_REQUEST['deleteFlight']))
 				
 		?>
 			
-			
+		</center>	
 		</div>
-	 	<div id="information">
-	 	</div>
+	 	</div> <!-- end of main -->
 	 	<?php include("footer.inc") ?>
 	</body>
 </html>

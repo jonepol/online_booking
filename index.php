@@ -11,7 +11,7 @@
 	 	<div id="main">
     	
         <div id="content">
-			<img src="images/uluru.jpg" alt="image 1" />
+			<img src="images/beach.jpg" alt="image 1" />
 			<br>
 			<br>
 			<h1><center>Welcome To Online Travel Agent</center></h1>

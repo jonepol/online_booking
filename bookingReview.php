@@ -50,11 +50,13 @@ unset($_SESSION['new_flight']);
 <html>
 	<head>
 		<title>Online Travel Agency</title>
-	 	<link rel='stylesheet' type='text/css' href='default.css'>
+	 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<?php include("menu.inc") ?>
+		<div id="main">
 		<div id="content">
+		<center>
 			<table>
 				<tr>
 					<td>Flight No</td>
@@ -90,9 +92,9 @@ unset($_SESSION['new_flight']);
 			<a href="search.php"><input type="button" value="Book More Flights"></a>
 			<a href="deleteFlight.php"><input type="button" value="Clear All Booked Flights"></a>
 			<a href="personalDetails.php"><input type="button" value="Proceed to Checkout"></a>
+		</center>
 		</div>
-	 	<div id="information">
-	 	</div>
+	 	</div> <!-- end of main -->
 	 	<?php include("footer.inc") ?>
 	</body>
 </html>
