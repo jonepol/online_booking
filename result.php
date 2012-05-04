@@ -3,12 +3,14 @@
 <html>
 	<head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel="stylesheet" type="text/css" href="default.css">
+	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
 		 <script src="result.js" type="text/javascript"></script>
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>
+		 <div id="main">
 		 <div id="content">
+		 <center>
 	 	  	<?php
 			require_once "db_setting.inc";
 			
@@ -67,14 +69,14 @@
 				print "</form>";
 			}
 			else {
-				print "no result\n";
+				print "No result\n";
 			}
 			
 			?>
-			
+		 </center>	
 	 	 </div>
-	 	 <div id="information">
-	 	 </div>
+
+		 </div> <!-- end of main -->	
 	 	 <?php include("footer.inc") ?>
 	 </body>
 </html>

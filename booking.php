@@ -36,86 +36,88 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
 		 <script src="jquery-1.7.1.js" type="text/javascript"></script>
 		 <script src="booking.js" type="text/javascript"></script>
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>
+		 <div id="main">
 	 	 <div id="content">
-	 	 		<p>Flight Detail:</p>
-	   <form name="seats" method="POST" action="bookingReview.php" onSubmit="return isSelected()">
-		<table>
-			<tr>
-				<td>Flight No: </td>
-				<td><?php echo $flight_no; ?></td>
-			</tr>
-				<td>From City: </td>
-				<td><?php echo $origin; ?></td>
-			<tr>
-				<td>To City: </td>
-				<td><?php echo $destination; ?></td>
-			</tr>
-			<tr>
-				<td>Price: </td>
-				<td><?php echo $price; ?></td>
-			</tr>
-		</table>
-	   	 <table>
-	   	   <tr>
-			 <td></td>
-	   	     <td>Seat</td>
-	   	     <td>Child</td>
-	   	     <td>Wheelchair</td>
-	   	     <td>Special Diet</td>
-	   	   </tr>
-	   	   <tr>
-		     <td>1</td>
-	   	     <td><input type="checkbox" name="seats[]" value="0" id="seatOne" onclick="enableSeatType('One')"></td>
-	   	     <td><input type="checkbox" name="seatType0[]" value="child" id="childOne" disabled></td>
-	   	     <td><input type="checkbox" name="seatType0[]" value="wheelchair" id="wheelchairOne" disabled></td>
-	   	     <td><input type="checkbox" name="seatType0[]" value="specialDiet" id="specialDietOne" disabled></td>
-	   	   </tr>
-	   	   <tr>
-			 <td>2</td>
-	   	     <td><input type="checkbox" name="seats[]" value="1" id="seatTwo" onclick="enableSeatType('Two')"></td>
-	   	     <td><input type="checkbox" name="seatType1[]" value="child" id="childTwo" disabled></td>
-	   	     <td><input type="checkbox" name="seatType1[]" value="wheelchair" id="wheelchairTwo" disabled></td>
-	   	     <td><input type="checkbox" name="seatType1[]" value="specialDiet" id="specialDietTwo" disabled></td>
-	   	   </tr>
-	   	   <tr>
-		     <td>3</td>
-	   	     <td><input type="checkbox" name="seats[]" value="2" id="seatThree" onclick="enableSeatType('Three')"></td>
-	   	     <td><input type="checkbox" name="seatType2[]" value="child" id="childThree" disabled></td>
-	   	     <td><input type="checkbox" name="seatType2[]" value="wheelchair" id="wheelchairThree" disabled></td>
-	   	     <td><input type="checkbox" name="seatType2[]" value="specialDiet" id="specialDietThree" disabled></td>
-	   	   </tr>
-	   	   <tr>
-		     <td>4</td>
-	   	     <td><input type="checkbox" name="seats[]" value="3" id="seatFour" onclick="enableSeatType('Four')"></td>
-	   	     <td><input type="checkbox" name="seatType3[]" value="child" id="childFour" disabled></td>
-	   	     <td><input type="checkbox" name="seatType3[]" value="wheelchair" id="wheelchairFour" disabled></td>
-	   	     <td><input type="checkbox" name="seatType3[]" value="specialDiet" id="specialDietFour" disabled></td>
-	   	   </tr>
-	   	   <tr>
-		     <td>5</td>
-	   	     <td><input type="checkbox" name="seats[]" value="4" id="seatFive" onclick="enableSeatType('Five')"></td>
-	   	     <td><input type="checkbox" name="seatType4[]" value="child" id="childFive" disabled></td>
-	   	     <td><input type="checkbox" name="seatType4[]" value="wheelchair" id="wheelchairFive" disabled></td>
-	   	     <td><input type="checkbox" name="seatType4[]" value="specialDiet" id="specialDietFive" disabled></td>
-	   	   </tr>
-		   <tr>
-			 <td colspan="4">Total number of seats selected:</td>
-			 <td id="numberOfSeats">0</td>
-		   </tr>
-		   <tr>
-			 <td colspan="5"><input type="submit" value="Add to Bookings"></td>
-		   </tr>
-		 </table>
-	   </form>	   
+		 <center>
+	 	 <h5>Flight Detail:</h5>
+		 <form name="seats" method="POST" action="bookingReview.php" onSubmit="return isSelected()">
+			<table>
+				<tr>
+					<td>Flight No: </td>
+					<td><?php echo $flight_no; ?></td>
+				</tr>
+					<td>From City: </td>
+					<td><?php echo $origin; ?></td>
+				<tr>
+					<td>To City: </td>
+					<td><?php echo $destination; ?></td>
+				</tr>
+				<tr>
+					<td>Price: </td>
+					<td><?php echo $price; ?></td>
+				</tr>
+			</table>
+			 <table>
+			   <tr>
+				 <td></td>
+				 <td>Seat</td>
+				 <td>Child</td>
+				 <td>Wheelchair</td>
+				 <td>Special Diet</td>
+			   </tr>
+			   <tr>
+				 <td>1</td>
+				 <td><input type="checkbox" name="seats[]" value="0" id="seatOne" onclick="enableSeatType('One')"></td>
+				 <td><input type="checkbox" name="seatType0[]" value="child" id="childOne" disabled></td>
+				 <td><input type="checkbox" name="seatType0[]" value="wheelchair" id="wheelchairOne" disabled></td>
+				 <td><input type="checkbox" name="seatType0[]" value="specialDiet" id="specialDietOne" disabled></td>
+			   </tr>
+			   <tr>
+				 <td>2</td>
+				 <td><input type="checkbox" name="seats[]" value="1" id="seatTwo" onclick="enableSeatType('Two')"></td>
+				 <td><input type="checkbox" name="seatType1[]" value="child" id="childTwo" disabled></td>
+				 <td><input type="checkbox" name="seatType1[]" value="wheelchair" id="wheelchairTwo" disabled></td>
+				 <td><input type="checkbox" name="seatType1[]" value="specialDiet" id="specialDietTwo" disabled></td>
+			   </tr>
+			   <tr>
+				 <td>3</td>
+				 <td><input type="checkbox" name="seats[]" value="2" id="seatThree" onclick="enableSeatType('Three')"></td>
+				 <td><input type="checkbox" name="seatType2[]" value="child" id="childThree" disabled></td>
+				 <td><input type="checkbox" name="seatType2[]" value="wheelchair" id="wheelchairThree" disabled></td>
+				 <td><input type="checkbox" name="seatType2[]" value="specialDiet" id="specialDietThree" disabled></td>
+			   </tr>
+			   <tr>
+				 <td>4</td>
+				 <td><input type="checkbox" name="seats[]" value="3" id="seatFour" onclick="enableSeatType('Four')"></td>
+				 <td><input type="checkbox" name="seatType3[]" value="child" id="childFour" disabled></td>
+				 <td><input type="checkbox" name="seatType3[]" value="wheelchair" id="wheelchairFour" disabled></td>
+				 <td><input type="checkbox" name="seatType3[]" value="specialDiet" id="specialDietFour" disabled></td>
+			   </tr>
+			   <tr>
+				 <td>5</td>
+				 <td><input type="checkbox" name="seats[]" value="4" id="seatFive" onclick="enableSeatType('Five')"></td>
+				 <td><input type="checkbox" name="seatType4[]" value="child" id="childFive" disabled></td>
+				 <td><input type="checkbox" name="seatType4[]" value="wheelchair" id="wheelchairFive" disabled></td>
+				 <td><input type="checkbox" name="seatType4[]" value="specialDiet" id="specialDietFive" disabled></td>
+			   </tr>
+			   <tr>
+				 <td colspan="4">Total number of seats selected:</td>
+				 <td id="numberOfSeats">0</td>
+			   </tr>
+			   <tr>
+				 <td colspan="5"><input type="submit" value="Add to Bookings"></td>
+			   </tr>
+			 </table>
+		</form>
+		</center>
 	 	</div>
-	 	<div id="information">
-	 	</div>
+	 	</div> <!-- end of main -->
 	 	<?php include("footer.inc") ?>
 	 </body>
 
