@@ -3,22 +3,24 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+		 <link href="css/style.css" rel="stylesheet" type="text/css" />
+
 	 </head>
 	 <body>
 	 	<?php include("menu.inc"); ?>
-	 		
-	 	<div id="content">
-	 		<h4>welcome to online travel booking system</h4>
-	 		<p>
-	 			This website is created as an Assignment for the subject Programming on the internet at the University of 
-	 			Technology, Sydney for Auntumn semester 2012.  
-	 		</p>
-	 	</div>
-	 	
-	 	<div id="information">
-	 		
-	 	</div>
+	 	<div id="main">
+    	
+        <div id="content">
+			<img src="images/uluru.jpg" alt="image 1" />
+			<br>
+			<br>
+			<h1><center>Welcome To Online Travel Agent</center></h1>
+			<h6>
+			This website is created as an Assignment for the subject Programming on the internet at the University of 
+			Technology, Sydney for Auntumn semester 2012.  
+			</h6>
+        </div>         
+		</div> <!-- end of main -->	
 	 	<?php include("footer.inc"); ?>
 	 </body>
 </html>
