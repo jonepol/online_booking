@@ -7,7 +7,7 @@
 	 //from seesion
 	 $personalDetail = $_SESSION['personalDetail'];
 	 $booked_flights = $_SESSION['booked_flights'];
-	 $total_price = 0;
+	 $total_price = 0.0;
       
 	  //sends booking detail to user' email address 
 	 $to = $personalDetail['emailAddress'];
@@ -73,7 +73,7 @@
 								."\t<td>$flight[special_diet]</td>"
 								."\t<td>$flight[price]</td>"
 							."</tr>\n";
-					 $total_price =  $total_price +(int)$flight['price'];
+					 $total_price =  $total_price +(float)$flight['price'];
 				}
        $body .="</table>\n"
 	             ."<p><h5>Total Price:$" . $total_price. "</h5></p>"
@@ -90,20 +90,18 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+	 	  <link href="css/style.css" rel="stylesheet" type="text/css" />
 	 </head>
 	 <body>
 	 	<?php include("menu.inc"); ?>
-	 		
-	 	<div id="content">
-            <h2>THANK YOU!</h2>
-			<p>Thank You!<br>
-			Your booking has been completed and a confirmation email has been sent to your email address.
-			</p>
-	 	</div>
-
-	 	<div id="information">
-	 	</div>
+	 	<div id="main">
+			<div id="content">
+				<h2>THANK YOU!</h2>
+				<p>
+				 Your booking has been completed and a confirmation email has been sent to your email address.
+				</p>
+			</div>
+		</div>
 	 	<?php include("footer.inc"); ?>
 	 </body>
 </html>

@@ -88,7 +88,7 @@
 				</tr>
 				<tr>
 					<td class="fieldlabel">Credit Card Number: <span class="compulsory"> *</span></td>
-					<td><input  id="creditCardNo" name="creditCardNo"/></td>
+					<td><input  id="creditCardNo" name="creditCardNo" maxlength="12" size="12"/></td>
 				</tr>
 				<tr>
 					<td class="fieldlabel">Name on Credit Card: <span class="compulsory"> *</span></td>

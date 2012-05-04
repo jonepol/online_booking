@@ -12,17 +12,14 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+	 	 <link rel='stylesheet' type='text/css' href='css/style.css'>
 	 </head>
 	 <body>
 	 	<?php include("menu.inc"); ?>
-	 		
-	 	<div id="content">
-	 		<p>Your mail is sent sucessfully</p>
-	 	</div>
-	 	
-	 	<div id="information">
-	 		
+	 	<div id="main">	
+			<div id="content">
+				<h5><center>Your mail is sent sucessfully</center></h5>
+			</div>
 	 	</div>
 	 	<?php include("footer.inc"); ?>
 	 </body>

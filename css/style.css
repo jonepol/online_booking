@@ -165,6 +165,22 @@ em { color: #e55822; }
 
 /* end of main */
 
+/* form */
+.fieldlabel{
+   text-align:right;
+   vertical-align:top;
+   font-weight:500;
+ }
+
+.compulsory{ 
+	color:red;
+}
+
+.half-compulsory{ 
+	color:orange;
+}
+/*end of form */
+
 /* footer */
 
 #footer  {

@@ -90,20 +90,20 @@
 <html>
 	 <head>
 	 	 <title>Online Travel Agency</title>
-	 	 <link rel='stylesheet' type='text/css' href='default.css'>
+	 	  <link href="css/style.css" rel="stylesheet" type="text/css" />
 	 </head>
 	 <body>
 	 	<?php include("menu.inc"); ?>
-	 		
-	 	<div id="content">
-            <h2>THANK YOU!</h2>
-			<p>Thank You!<br>
-			Your booking has been completed and a confirmation email has been sent to your email address.
-			</p>
-	 	</div>
-
-	 	<div id="information">
-	 	</div>
+	 	<div id="main">
+			<div id="content">
+				<center>
+				<h2>THANK YOU!</h2>
+				<p>
+				 Your booking has been completed and a confirmation email has been sent to your email address.
+				</p>
+				</center>
+			</div>
+		</div>
 	 	<?php include("footer.inc"); ?>
 	 </body>
 </html>

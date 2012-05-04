@@ -10,16 +10,18 @@
 <html>
 	<head>
 		<title>Online Travel Agency</title>
-	 	<link rel='stylesheet' type='text/css' href='default.css'>
+	 	<link rel='stylesheet' type='text/css' href='css/style.css'>
 	</head>
 	<body>
 		<?php include("menu.inc") ?>
-		<div id="content">
-			<p><h5>You have deleted all flights!<h5></p>
-			<a href="search.php"><input type="button" value="Book More Flights"></a>
+		<div id="main">
+			<div id="content">
+				<center>
+				<p><h5>You have deleted all flights!<h5></p>
+				<a href="search.php"><input type="button" value="Book More Flights"></a>
+				</center>
+			</div>
 		</div>
-	 	<div id="information">
-	 	</div>
 	 	<?php include("footer.inc") ?>
 	</body>
 </html>

@@ -2,64 +2,24 @@
   "http://www.w3.org/TR/html4/strict.dtd">
 
 <?php
-session_start();
-
-if (!isset($_SESSION['booked_flights']))
-{
-	$booked_flights = array();
-}
-else
-{								   
-	$booked_flights = $_SESSION['booked_flights'];
-}
-
-$seats = $_REQUEST['seats'];
-
-for ($i = 0; $i < count($seats); $i++)
-{
-	$new_flight = $_SESSION['new_flight'];
-	if (isset($_REQUEST['seatType'.$seats[$i]]))
-	{
-		$seat_type = $_REQUEST['seatType'.$seats[$i]];
-		
-		for ($k = 0; $k < count($seat_type); $k++)
-		{
-			
-			if ($seat_type[$k] == "child")
-			{
-				$new_flight['child'] = "YES";
-			}
-			if ($seat_type[$k] == "wheelchair")
-			{
-				$new_flight['wheelchair'] = "YES";
-			}
-			if ($seat_type[$k] == "specialDiet")
-			{
-				$new_flight['special_diet'] = "YES";
-			}
-		}
-	}
-	array_push($booked_flights, $new_flight);
-}
-
-$_SESSION['booked_flights'] = $booked_flights;
-unset($_SESSION['new_flight']);
-
+	session_start();
+	//clear all booked_flight from session
+	unset($_SESSION['booked_flights']);
 ?>  
 
 <html>
 	<head>
 		<title>Online Travel Agency</title>
-	 	<link rel='stylesheet' type='text/css' href='default.css'>
+	 	<link rel='stylesheet' type='text/css' href='css/style.css'>
 	</head>
 	<body>
 		<?php include("menu.inc") ?>
-		<div id="content">
-			<p><h5>You have deleted all flights!<h5></p>
-			<a href="search.php"><input type="button" value="Book More Flights"></a>
+		<div id="main">
+			<div id="content">
+				<p><h5>You have deleted all flights!<h5></p>
+				<a href="search.php"><input type="button" value="Book More Flights"></a>
+			</div>
 		</div>
-	 	<div id="information">
-	 	</div>
 	 	<?php include("footer.inc") ?>
 	</body>
 </html>
