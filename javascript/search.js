@@ -9,4 +9,12 @@ $().ready(function() {
 		matchContains: true,
 		selectFirst: false,
 	});
+	
+	$("#searchLink").addClass('current'); 
+	$("#homeLink").removeClass('current');
+	$("#bookingLink").removeClass('current');
+	$("#contactLink").removeClass('current');
 });
+
+
+

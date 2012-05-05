@@ -1,3 +1,10 @@
+$().ready(function() {
+	$("#contactLink").addClass('current'); 
+	$("#homeLink").removeClass('current');
+	$("#bookingLink").removeClass('current');
+	$("#searchLink").removeClass('current');
+});
+
 function contact_validation()
 {   
 	email = document.getElementById("emailAddress").value;

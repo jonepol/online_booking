@@ -23,6 +23,8 @@ if (isset($_REQUEST['deleteFlight']))
 	<head>
 		<title>Online Travel Agency</title>
 	 	<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="javascript/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="javascript/bookingLink.js"></script>
 	</head>
 	<body>
 		<?php include("menu.inc") ?>
