@@ -67,10 +67,10 @@
 			 <table>
 			   <tr>
 				 <td></td>
-				 <td>Seat</td>
-				 <td>Child</td>
-				 <td>Wheelchair</td>
-				 <td>Special Diet</td>
+				 <th>Seat</th>
+				 <th>Child</th>
+				 <th>Wheelchair</th>
+				 <th>Special Diet</th>
 			   </tr>
 			   <tr>
 				 <td>1</td>

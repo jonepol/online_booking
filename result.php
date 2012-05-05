@@ -50,11 +50,11 @@
 			?>
 			
 			<form id="selectFlight" name="selectFlight" method="POST" action="booking.php" onSubmit="return isSelected()">
-			<table border=0>
+			<table class="table">
 			<tr>
-			<td>From</td>
-			<td>To</td>
-			<td>Select</td>
+			<th>From</th>
+			<th>To</th>
+			<th>Select</th>
 			</tr>
 			
 			<?php
