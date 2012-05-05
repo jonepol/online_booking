@@ -18,31 +18,35 @@ function payment_validation()
 
 	if (creditCardNo == "" || ownerName =="" || expiryYear =="" || securityCode == "")
 	{
-		alert("One or more compulsory fields is blank");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>One or more compulsory fields is blank</td>");
 		return false;
 	}
 	else if (!cardNumberReg.test(creditCardNo))
 	{
-		alert("The Credit Card number is invalid, must be 12 digits!");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>The Credit Card number is invalid, must be 12 digits!</td>");
 		document.getElementById("creditCardNo").value="";
 		return false;
 	}
 	else if(!yearReg.test(expiryYear))
 	{
-		alert("The expiry date is invalid, must be in future!");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>The expiry date is invalid, must be in future!</td>");
 		document.getElementById("expiryYear").value="";
 		return false;
 	}
 	else if (!validExpiryDate(expiryYear))
 	{
-		alert("The expiry date is invalid, must be in future!");
-		document.getElementById("expiryYear").value="";
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>The expiry date is invalid, must be in future!</td>");
 		return false;
 	}
 
 	else if (!securityCodeReg.test(securityCode))
 	{
-		alert("The security code is invalid, must be 3 digits!");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>The security code is invalid, must be 3 digits!</td>");
 		document.getElementById("securityCode").value="";
 		return false;
 	}

@@ -11,16 +11,17 @@ function personal_detail_validation()
     var emailReg = /^\w{1,15}(?:@(?!-))(?:(?:[a-z0-9-]*)(?:[a-z0-9](?!-))(?:\.(?!-)))+[a-z]{2,4}$/;
 	var postcodeReg = /[0-9]{4}/; // postcode regular expression 
 	var phoneReg = /[0-9]{1,20}/; //mobile regular expression
-
+    
 	//check if the compulsory fileds are filled
-	if(document.getElementById("givenName").value == ""
-	   || document.getElementById("familyName").value == ""
-	   || document.getElementById("address1").value == ""
-	   || document.getElementById("country").value == ""
-	   || document.getElementById("suburb").value =="" 
-	   || document.getElementById("emailAddress").value == "")
+	if(!document.getElementById("givenName")
+	   || !document.getElementById("familyName").value
+	   || !document.getElementById("address1").value
+	   || !document.getElementById("country").value 
+	   || !document.getElementById("suburb").value
+	   || !document.getElementById("emailAddress").value)
 	{
-		alert("One or more compulsory fields is blank");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>One or more compulsory fields is blank</td>");
 		return false;
 	}
 	//if country is Australia then check if postcode, suburb and state are blank
@@ -30,13 +31,14 @@ function personal_detail_validation()
 
 		if(document.getElementById("state").value == "" || postcode == "")
 		{
-			alert("One or more compulsory fields is blank");
+			$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>One or more compulsory fields is blank</td>");
 			return false;
 		}
 		//check if the postcode is correct
 		else if (!postcodeReg.test(postcode))
 		{
-			alert("Please enter a valid postcode");
+    		//display error message
+			$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>Please enter a valid postcode</td>");
 			document.getElementById("postcode").value = "";
 			return false;
 		}
@@ -44,24 +46,29 @@ function personal_detail_validation()
 	//check if the emai is correct
 	else if (!emailReg.test(document.getElementById("emailAddress").value))
 	{
-		alert("Please enter a valid email address");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>Please enter a valid email address</td>");
+		document.getElementById("emailAddress").value = "";
 		return false;
 	}
 	else if (document.getElementById("mobilePhone").value !="" && !phoneReg.test(document.getElementById("mobilePhone").value))
 	{
-		alert("Please enter a valid phone number");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>Please enter a mobile valid phone numbers</td>");
 		document.getElementById("mobilePhone").value = "";
 		return false;
 	}
 	else if (document.getElementById("businessPhone").value !="" && !phoneReg.test(document.getElementById("businessPhone").value))
 	{
-		alert("Please enter a valid phone number");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>Please enter a business valid phone numbers</td>");
 		document.getElementById("businessPhone").value = "";
 		return false;
 	}
 	else if (document.getElementById("workPhone").value !="" && !phoneReg.test(document.getElementById("workPhone").value))
 	{
-		alert("Please enter a valid phone number");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>Please enter a work valid phone numbers</td>");
 		document.getElementById("workPhone").value = "";
 		return false;
 	}
@@ -70,4 +77,4 @@ function personal_detail_validation()
 		return true;
 	}
 	
-}
+  }

@@ -15,17 +15,18 @@ function contact_validation()
 	 ||document.getElementById("emailAddress").value == ""
 	 ||document.getElementById("emailContent").value == "")
 	{
-		alert("One or more compulsory fields is blank");
+		 //display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>One or more compulsory fields is blank</td>");
 		return false;
 	}
 	else if (!emailReg.test(email))
 	{
-		alert("Please enter a valid email address");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='compulsory' align='center'>Please enter a valid email address</td>");
 		return false;
 	}
 	else
 	{
-		document.getElementById("isPostBack").value = "true";
 		return true;
 	}
 }

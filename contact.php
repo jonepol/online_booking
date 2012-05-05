@@ -15,6 +15,9 @@
 				<form method="POST" onsubmit="return contact_validation()" action ="sentemail.php">
 					<table>
 						<tr>
+							<td colspan="2" align='center'><span id= 'errorMessage' class='compulsory'></span><br></td>
+						</tr>
+						<tr>
 							<td class="fieldlabel">Subject<span class="compulsory"> *</span></td>
 							<td><input id="subject" name="subject" type="text"></td>
 						</tr>
@@ -39,7 +42,6 @@
 							<td><input type="submit" class="button" value="Contact"></td>
 						<tr>
 					</table>
-					<input type="hidden" id="isPostBack" value="flase">
 				</form>
 				<p>Note:Your email will be sent to the website owner UTS email: <br>
 				Guotong.Zheng-1@student.uts.edu.au	

@@ -13,11 +13,16 @@
 		  <div id="main">
 			  <div id="content">
 				<center>
+				<h5>Stage2: Person Detail<h5>
 				<form name="personDetail" method="POST" onsubmit="return personal_detail_validation()" action="payment.php">
 					<table>
 						<tr>
+						   <td colspan="2" align='center'><span id= 'errorMessage' class='compulsory'></span><br></td>
+						</tr>
+						<tr>
 							<td class="fieldlabel">Given Name:<span class="compulsory"> *</span></td>
 							<td><input type="text" name="givenName" id="givenName"></td>
+							<td id="givenNameValidation"></td>
 						</tr>
 						<tr>
 							<td class="fieldlabel">Family Name:<span class="compulsory"> *</span></td>
@@ -25,7 +30,7 @@
 						</tr>
 						<tr>
 							<td class="fieldlabel">Address Line 1:<span class="compulsory"> *</span></td>
-							<td><input type="text" name="address1" id="address1"></td>
+							<td><input type="text" name="address1" id="address1" ></td>
 						</tr>
 						<tr>
 							<td class="fieldlabel">Address line 2:&nbsp;&nbsp;</td>
@@ -49,7 +54,7 @@
 						</tr>
 						<tr>
 							<td class="fieldlabel">Email Address:<span class="compulsory"> *</span></td>
-							<td><input type="text" name="emailAddress" id="emailAddress" ></td>
+							<td><input type="text" name="emailAddress" id="emailAddress"></td>
 						</tr>
 						<tr>
 							<td class="fieldlabel">Mobile Phone:&nbsp; &nbsp; </td>
@@ -64,7 +69,7 @@
 							<td><input type="text" name="workPhone" id="workPhone"></td>
 						</tr>
 						<tr>
-						   <td colspan="2"><span class="compulsory">note: State and postcode are optional fields for booking made from outside Australia</span></td>
+						   <td colspan="2"><span >Note: State and postcode are optional fields for booking made from outside Australia</span></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="center"><input type="submit" class="button" value="Stage 2 - Payment Details"></td>

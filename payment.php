@@ -79,6 +79,9 @@
 			<form name="paymentDetail" method="POST" onsubmit="return payment_validation()" action="reviewDetail.php">
 				<table>
 					<tr>
+						<td colspan="2" align='center'><span id= 'errorMessage' class='compulsory'></span><br></td>
+					</tr>
+					<tr>
 						<td class="fieldlabel">Credit Card Type: <span class="compulsory"> *</span></td>
 						<td>
 							<select>
