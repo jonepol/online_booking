@@ -155,13 +155,6 @@ em { color: #e55822; }
 	margin-bottom: 20px;
 }
 
-.cb_last {
-	padding-bottom: 0;
-	margin-bottom: 0;
-	border-bottom: none;
-}
-
-.icon_link { display: block; float: left; margin-left: 30px; width: 48px; }
 
 /* end of main */
 
@@ -275,15 +268,6 @@ em { color: #e55822; }
 	color: #161616;
 /*	text-shadow: 0px 1px 1px #FFFFFF; */
 	background: url(../images/footer.png) no-repeat;
-}
-
-#footer a {
-	text-decoration: none;
-	color: #161616;
-}
-
-#footer a:hover {
-	color: #990000;
 }
 
 /* end of footer */

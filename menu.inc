@@ -9,11 +9,10 @@
         
         <div id="menu">
             <ul>
-                <li><a href="index.php" target="_parent" class="current">Home</a></li>
-                <li><a href="search.php" target="_parent">Search Flights</a></li>
-				<li><a href="yourBooking.php">Your Booking</a></li>
-                <!-- <li><a href="about.php">About</a></li> -->
-                <li class="last"><a href="contact.php">Contact</a></li>
+                <li><a href="index.php" target="_parent" id="homeLink" class="current">Home</a></li>
+                <li><a href="search.php" id="searchLink" target="_parent">Search Flights</a></li>
+				<li><a href="yourBooking.php" id="bookingLink">Your Booking</a></li>
+                <li class="last"><a href="contact.php" id="contactLink">Contact</a></li>
             </ul>    	
 	    </div> <!-- end of menu -->
     </div> <!-- end of header -->
