@@ -4,7 +4,7 @@
 	<head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
-		 <script src="result.js" type="text/javascript"></script>
+		 <script src="javascript/result.js" type="text/javascript"></script>
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>

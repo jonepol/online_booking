@@ -37,8 +37,8 @@
 	 <head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
-		 <script src="jquery-1.7.1.js" type="text/javascript"></script>
-		 <script src="booking.js" type="text/javascript"></script>
+		 <script src="javascript/jquery-1.7.1.js" type="text/javascript"></script>
+		 <script src="javascript/booking.js" type="text/javascript"></script>
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>

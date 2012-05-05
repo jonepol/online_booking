@@ -27,7 +27,7 @@
 	 <head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link rel="stylesheet" type="text/css" href="css/style.css">
-		 <script type="text/javascript" src="payment.js"></script>
+		 <script type="text/javascript" src="javascript/payment.js"></script>
 	 </head>
 	
 	<body>

@@ -4,7 +4,7 @@
 	 <head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link rel="stylesheet" type="text/css" href="css/style.css">
-		 <script type="text/javascript" src="personalDetail.js">
+		 <script type="text/javascript" src="javascript/personalDetail.js">
 		 </script>
 	 </head>
 	 <body>
