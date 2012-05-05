@@ -66,7 +66,7 @@
 						   <td colspan="2"><span class="compulsory">note: State and postcode are optional fields for booking made from outside Australia</span></td>
 						</tr>
 						<tr>
-							<td colspan="2" align="center"><input type="submit" value="Stage 2 - Payment Details"></td>
+							<td colspan="2" align="center"><input type="submit" class="button" value="Stage 2 - Payment Details"></td>
 						</tr>
 					</table>
 				</form>

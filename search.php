@@ -6,9 +6,10 @@
 	 	 <title>Online Travel Agency</title>
 	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
 		 <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
-		 <script type="text/javascript" src="javascript/jquery-1.7.1.js"></script>
-		 <script type='text/javascript' src="javascript/jquery.autocomplete.js"></script>
+		 <script type="text/javascript" src="javascript/jquery-1.7.1.js"></script> 
 		 <script type="text/javascript" src="javascript/search.js"></script>
+		 <script type='text/javascript' src="javascript/jquery.autocomplete.js"></script>
+  
 	 </head>
 	 <body>
 	 	  <?php include("menu.inc") ?>
@@ -34,7 +35,7 @@
 	 	  		</tr>
 	 	  	</table>
 	 	  	<br>
-	 	  	<input type="submit" value="Search Flights"/>
+	 	  	<input class="button" type="submit" value="Search Flights"/>
 	 	  </form>
 		  </center>
 	 	 </div>

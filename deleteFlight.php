@@ -18,7 +18,7 @@
 			<div id="content">
 				<center>
 				<p><h5>You have deleted all flights!<h5></p>
-				<a href="search.php"><input type="button" value="Book More Flights"></a>
+				<a href="search.php"><input type="button" class="button" value="Book More Flights"></a>
 				</center>
 			</div>
 		</div>

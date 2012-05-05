@@ -89,9 +89,9 @@ unset($_SESSION['new_flight']);
 					<td><?php echo $totalPrice ?></td>
 				</tr>
 			</table>
-			<a href="search.php"><input type="button" value="Book More Flights"></a>
-			<a href="deleteFlight.php"><input type="button" value="Clear All Booked Flights"></a>
-			<a href="personalDetails.php"><input type="button" value="Proceed to Checkout"></a>
+			<a href="search.php"><input type="button" class="button" value="Book More Flights"></a>
+			<a href="deleteFlight.php"><input type="button" class="button" value="Clear All Booked Flights"></a>
+			<a href="personalDetails.php"><input type="button" class="button" value="Proceed to Checkout"></a>
 		</center>
 		</div>
 	 	</div> <!-- end of main -->

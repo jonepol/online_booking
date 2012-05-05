@@ -93,7 +93,7 @@
 				   </table>
 				</p>
 				<form  method="POST" action="confirm.php">
-					<input type="submit" value="Stage 4-Confirm Payment" />
+					<input type="submit" class="button" value="Stage 4-Confirm Payment" />
 				</form>
 				</center>
 			</div>
