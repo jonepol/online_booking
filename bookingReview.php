@@ -59,15 +59,15 @@ unset($_SESSION['new_flight']);
 		<div id="main">
 		<div id="content">
 		<center>
-			<table>
+			<table class="table">
 				<tr>
-					<td>Flight No</td>
-					<td>From City</td>
-					<td>To City</td>
-					<td>Child</td>
-					<td>Wheel Chair</td>
-					<td>Special Diet</td>
-					<td>Price</td>
+					<th>Flight No</th>
+					<th>From City</th>
+					<th>To City</th>
+					<th>Child</th>
+					<th>Wheel Chair</th>
+					<th>Special Diet</th>
+					<th>Price</th>
 				</tr>
 				<?php
 				$totalPrice = 0.0;
@@ -86,10 +86,12 @@ unset($_SESSION['new_flight']);
 				}
 				
 				?>
+				<tfoot>
 				<tr>
 					<td colspan = 6>Total Price</td>
 					<td><?php echo $totalPrice ?></td>
 				</tr>
+				</tfoot>
 			</table>
 			<a href="search.php"><input type="button" class="button" value="Book More Flights"></a>
 			<a href="deleteFlight.php"><input type="button" class="button" value="Clear All Booked Flights"></a>

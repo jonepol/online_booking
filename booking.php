@@ -46,7 +46,7 @@
 		 <div id="main">
 	 	 <div id="content">
 		 <center>
-	 	 <h5>Flight Detail:</h5>
+	 	 <h5>Flight Detail</h5>
 		 <form name="seats" method="POST" action="bookingReview.php" onSubmit="return isSelected()">
 			<table>
 				<tr>
@@ -64,13 +64,13 @@
 					<td><?php echo $price; ?></td>
 				</tr>
 			</table>
-			 <table>
+			 <table class="table">
 			   <tr>
-				 <td></td>
-				 <td>Seat</td>
-				 <td>Child</td>
-				 <td>Wheelchair</td>
-				 <td>Special Diet</td>
+				 <th></th>
+				 <th>Seat</th>
+				 <th>Child</th>
+				 <th>Wheelchair</th>
+				 <th>Special Diet</th>
 			   </tr>
 			   <tr>
 				 <td>1</td>
@@ -107,10 +107,12 @@
 				 <td><input type="checkbox" name="seatType4[]" value="wheelchair" id="wheelchairFive" disabled></td>
 				 <td><input type="checkbox" name="seatType4[]" value="specialDiet" id="specialDietFive" disabled></td>
 			   </tr>
+			   <tfoot>
 			   <tr>
 				 <td colspan="4">Total number of seats selected:</td>
 				 <td id="numberOfSeats">0</td>
 			   </tr>
+			   <tfoot>
 			 </table>
 			 <input class="button" type="submit" value="Add to Bookings">
 		</form>
