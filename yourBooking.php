@@ -36,15 +36,16 @@ if (isset($_REQUEST['deleteFlight']))
 		if (isset($_SESSION['booked_flights']) && count($_SESSION['booked_flights']) > 0)
 		{
 			print "<form method=\"POST\" action=\"yourBooking.php\">\n
-				   <table>\n
+				   <table class=\"table\">\n
 				   <tr>\n
-				   \t<td>Flight No</td>\n
-				   \t<td>From City</td>\n
-				   \t<td>To City</td>\n
-				   \t<td>Child</td>\n
-				   \t<td>Wheel Chair</td>\n
-				   \t<td>Special Diet</td>\n
-				   \t<td>Price</td>\n
+				   \t<th>Flight No</th>\n
+				   \t<th>From City</th>\n
+				   \t<th>To City</th>\n
+				   \t<th>Child</th>\n
+				   \t<th>Wheel Chair</th>\n
+				   \t<th>Special Diet</th>\n
+				   \t<th>Price</th>\n
+				   \t<th></th>\n
 				   </tr>\n";
 
 			$booked_flights = $_SESSION['booked_flights'];
@@ -66,7 +67,7 @@ if (isset($_REQUEST['deleteFlight']))
 					$total_price =  $total_price +(float)$booked_flights[$i]['price'];
 				}
 			}
-			print "<tr><td colspan = 6>Total Price</td><td>".$total_price."</td></tr>";
+			print "<tfoot><tr><td colspan = 6>Total Price</td><td colspan = 2>".$total_price."</td></tr></tfoot>";
 			print "</table>";
 			print "<input type=\"submit\" class=\"button\" value=\"Delete Selected Flights\">";
 			print "<a href=\"personalDetails.php\"><input type=\"button\" class=\"button\" value=\"Proceed to Checkout\"></a>";
