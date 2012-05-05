@@ -4,8 +4,14 @@
 	<head>
 	 	 <title>Online Travel Agency</title>
 	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
+
 		 <script type="text/javascript" src="javascript/jquery-1.7.1.js"></script>
+
+		 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
 		 <script src="javascript/result.js" type="text/javascript"></script>
+		 <script type="text/javascript" src="javascript/button.js"></script>
+		 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js""></script>
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>
@@ -65,8 +71,8 @@
 					 print "</tr>\n";
 				}
 				print "</table>\n";
-				print "<a href=\"search.php\"><input type=\"button\" value=\"<New Search\")\"></a>\n";
-				print "<input type=\"submit\" value=\"Make Booking for Selected Flight\">\n";
+				print "<a href=\"search.php\"><input class=\"button\" type=\"button\" value=\"<New Search\")\"></a>\n";
+				print "<input type=\"submit\" class=\"button\" value=\"Make Booking for Selected Flight\">\n";
 				print "</form>";
 			}
 			else {

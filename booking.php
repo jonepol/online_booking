@@ -39,6 +39,7 @@
 	 	 <link href="css/style.css" rel="stylesheet" type="text/css" />
 		 <script src="javascript/jquery-1.7.1.js" type="text/javascript"></script>
 		 <script src="javascript/booking.js" type="text/javascript"></script>
+		 
 	 </head>
 	 <body>
 	 	 <?php include("menu.inc") ?>
@@ -110,10 +111,8 @@
 				 <td colspan="4">Total number of seats selected:</td>
 				 <td id="numberOfSeats">0</td>
 			   </tr>
-			   <tr>
-				 <td colspan="5"><input type="submit" value="Add to Bookings"></td>
-			   </tr>
 			 </table>
+			 <input class="button" type="submit" value="Add to Bookings">
 		</form>
 		</center>
 	 	</div>

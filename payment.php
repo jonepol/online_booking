@@ -122,7 +122,7 @@
 						<td><input id="securityCode" name="securityCode" maxlength="3" size="3"/></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="submit" value="Stage 3 - Review Bookings and Details"/></td>
+						<td colspan="2" align="center"><input type="submit" class="button" value="Stage 3 - Review Bookings and Details"/></td>
 					</tr>
 				</table>
 			</form>

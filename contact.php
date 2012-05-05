@@ -36,7 +36,7 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="submit" value="Contact"></td>
+							<td><input type="submit" class="button" value="Contact"></td>
 						<tr>
 					</table>
 					<input type="hidden" id="isPostBack" value="flase">

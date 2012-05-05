@@ -15,7 +15,7 @@ if (isset($_REQUEST['deleteFlight']))
 	}
 	
 	$_SESSION['booked_flights'] = array_values($booked_flights);
-	$_SESSION['booked_flights'] = $booked_flights;
+	
 }
 ?>  
 
@@ -68,14 +68,14 @@ if (isset($_REQUEST['deleteFlight']))
 			}
 			print "<tr><td colspan = 6>Total Price</td><td>".$total_price."</td></tr>";
 			print "</table>";
-			print "<input type=\"submit\" value=\"Delete Selected Flights\">";
+			print "<input type=\"submit\" class=\"button\" value=\"Delete Selected Flights\">";
+			print "<a href=\"personalDetails.php\"><input type=\"button\" class=\"button\" value=\"Proceed to Checkout\"></a>";
 			print "</form>";
-			print "<a href=\"personalDetails.php\"><input type=\"button\" value=\"Proceed to Checkout\"></a>";
 		}
 		else
 		{								   
 			print "<p>You have no bookings</p>";
-			print "<a href=\"search.php\"><input type=\"button\" value=\"Book More Flights\"></a>";
+			print "<a href=\"search.php\"><input type=\"button\" class=\"button\" value=\"Book More Flights\"></a>";
 		}
 				
 		?>
