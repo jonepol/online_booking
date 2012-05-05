@@ -10,7 +10,7 @@
 	 	<div id="main">
     	
         <div id="content">
-			<img src="images/beach.jpg" alt="image 1" />
+			<center><img src="images/beach.jpg" alt="image 1" /></center>
 			<br>
 			<br>
 			<h1><center>Welcome To Online Travel Agent</center></h1>

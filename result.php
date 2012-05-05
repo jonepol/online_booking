@@ -18,6 +18,7 @@
 		 <div id="main">
 		 <div id="content">
 		 <center>
+		 <h5>Search Result</h5>
 	 	  	<?php
 			require_once "db_setting.inc";
 			
@@ -76,7 +77,9 @@
 				print "</form>";
 			}
 			else {
-				print "No result\n";
+				print "<br>\n";
+				print "<p>Sorry, there is no such flight. Please search again. <p>\n";
+				print "<a href=\"search.php\"><input class=\"button\" type=\"button\" value=\"<New Search\")\"></a>\n";
 			}
 			
 			?>

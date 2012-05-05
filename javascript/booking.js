@@ -30,7 +30,7 @@ function enableSeatType(row)
 		totalSeats -=1;
    }
    //update total number of seat in the html
-   $("#numberOfSeats").replaceWith("<td id='numberOfSeats'>" + totalSeats + "</td>");
+   $("#numberOfSeats").replaceWith("<span id='numberOfSeats'>" + totalSeats + "</span>");
 }
 
 function isSelected()

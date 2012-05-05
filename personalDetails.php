@@ -13,7 +13,7 @@
 		  <div id="main">
 			  <div id="content">
 				<center>
-				<h5>Stage2: Person Detail<h5>
+				<h5>Stage1: Person Detail<h5>
 				<form name="personDetail" method="POST" onsubmit="return personal_detail_validation()" action="payment.php">
 					<table>
 						<tr>

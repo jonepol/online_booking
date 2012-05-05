@@ -64,6 +64,8 @@
 					<td><?php echo $price; ?></td>
 				</tr>
 			</table>
+			<br><br>
+			<h5>Book for Seats</h5>
 			 <table class="table">
 			   <tr>
 				 <th></th>
@@ -109,8 +111,7 @@
 			   </tr>
 			   <tfoot>
 			   <tr>
-				 <td colspan="4">Total number of seats selected:</td>
-				 <td id="numberOfSeats">0</td>
+				 <td colspan="5">Total number of seats selected:  <span id="numberOfSeats">0</span></td>
 			   </tr>
 			   <tfoot>
 			 </table>

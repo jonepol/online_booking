@@ -18,6 +18,8 @@
     	
 		  <div id="content">
 			<center>
+			<h5>Flight Search</h5>
+			<br>
 	 	  	<form id="searchForm" method="POST" action="result.php">
 	 	  	<table>
 	 	  		<tr>
