@@ -61,15 +61,15 @@
 					?>
 				</table>
 				<p>
-					<table>
+					<table class="table">
 						<tr>
-							<td>Flight No</td>
-							<td>From City</td>
-							<td>To City</td>
-							<td>Child</td>
-							<td>Wheel Chair</td>
-							<td>Special Diet</td>
-							<td>Price</td>
+							<th>Flight No</th>
+							<th>From City</th>
+							<th>To City</th>
+							<th>Child</th>
+							<th>Wheel Chair</th>
+							<th>Special Diet</th>
+							<th>Price</th>
 					</tr>
 					<?php
 						$booked_flights = $_SESSION['booked_flights'];
@@ -88,10 +88,12 @@
 							$totalPrice = $totalPrice + (float)$flight['price'];
 						}
 					?>
+					<tfoot>
 					<tr>
 						<td colspan = 6>Total Price</td>
 						<td><?php echo $totalPrice ?></td>
 					</tr>
+					</tfoot>
 				   </table>
 				</p>
 				<form  method="POST" action="confirm.php">

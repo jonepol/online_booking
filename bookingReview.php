@@ -59,6 +59,7 @@ unset($_SESSION['new_flight']);
 		<div id="main">
 		<div id="content">
 		<center>
+			<h5>Booking Review</h5>
 			<table class="table">
 				<tr>
 					<th>Flight No</th>
