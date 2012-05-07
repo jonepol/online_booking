@@ -75,7 +75,7 @@
 						print "\t<td class=\"fieldlabel\">Business Phone:</td><td>" .$personalDetail['businessPhone']. "</td>\n";
 					?>
 				</table>
-			<p><h4>Payment Details <h4></p>
+			<p><h5>Stage2: Payment Details <h5></p>
 			<form name="paymentDetail" method="POST" onsubmit="return payment_validation()" action="reviewDetail.php">
 				<table>
 					<tr>

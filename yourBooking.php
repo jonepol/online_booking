@@ -31,6 +31,7 @@ if (isset($_REQUEST['deleteFlight']))
 		<div id="main">
 		<div id="content">
 		<center>
+		<h5>Your Booking</h5>
 		<?php
 
 		if (isset($_SESSION['booked_flights']) && count($_SESSION['booked_flights']) > 0)

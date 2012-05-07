@@ -15,7 +15,8 @@ else
 
 $seats = $_REQUEST['seats'];
 
-for ($i = 0; $i < count($seats); $i++)
+if (isset($_SESSION['new_flight'])){
+	for ($i = 0; $i < count($seats); $i++)
 {
 	$new_flight = $_SESSION['new_flight'];
 	if (isset($_REQUEST['seatType'.$seats[$i]]))
@@ -41,9 +42,10 @@ for ($i = 0; $i < count($seats); $i++)
 	}
 	array_push($booked_flights, $new_flight);
 }
+	$_SESSION['booked_flights'] = $booked_flights;
+	unset($_SESSION['new_flight']);
+}
 
-$_SESSION['booked_flights'] = $booked_flights;
-unset($_SESSION['new_flight']);
 
 ?>  
 
@@ -72,20 +74,22 @@ unset($_SESSION['new_flight']);
 				</tr>
 				<?php
 				$totalPrice = 0.0;
-				foreach ($booked_flights as $flight)
-				{
-					print "<tr>\n";
-					print "\t<td>$flight[flight_no]</td>";
-					print "\t<td>$flight[origin]</td>";
-					print "\t<td>$flight[destination]</td>";
-					print "\t<td>$flight[child]</td>";
-					print "\t<td>$flight[wheelchair]</td>";
-					print "\t<td>$flight[special_diet]</td>";
-					print "\t<td>$flight[price]</td>";
-					print "</tr>\n";
-					$totalPrice = $totalPrice + (float)$flight['price'];
+				if(isset($booked_flights)){
+					
+					foreach ($booked_flights as $flight)
+					{
+						print "<tr>\n";
+						print "\t<td>$flight[flight_no]</td>";
+						print "\t<td>$flight[origin]</td>";
+						print "\t<td>$flight[destination]</td>";
+						print "\t<td>$flight[child]</td>";
+						print "\t<td>$flight[wheelchair]</td>";
+						print "\t<td>$flight[special_diet]</td>";
+						print "\t<td>$flight[price]</td>";
+						print "</tr>\n";
+						$totalPrice = $totalPrice + (float)$flight['price'];
+					}
 				}
-				
 				?>
 				<tfoot>
 				<tr>

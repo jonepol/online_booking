@@ -12,7 +12,7 @@
 	 	<div id="main">	
 			<div id="content">
 				<center>
-				<p><h5>All Details Review<h5></p>
+				<p><h5>Stage 3: All Details Review<h5></p>
 				  <table>
 					<?php
 						session_start();

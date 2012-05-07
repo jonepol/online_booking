@@ -26,31 +26,6 @@ h4 { font-size: 18px; margin: 0 0 20px 0; padding: 0 0 10px 0;  }
 h5 { font-size: 16px; margin: 0 0 10px 0; padding: 0; }
 h6 { font-size: 14px; margin: 0 0 5px 0; padding: 0; }
 
-.float_l { float: left; }
-.float_r { float: right; }
-
-.image_wrapper {
-	position: relative;
-	display: block;
-	width: 342px;
-	height: 330px;
-	padding: 9px;
-}
-.image_wrapper span {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 360px;
-	height: 346px;
-	background: url(../images/image_frame_big.png) no-repeat;
-}
-.image_fl { float: left; margin: 3px 20px 0 0; }
-.image_fr { float: right; margin: 3px 0 0 20px; }
-
-blockquote { font-style: italic; margin-left: 10px;}
-cite { font-weight: bold; color:#3b3823; }
-cite span { color: #696443; }
-em { color: #e55822; }
 
 #wrapper {
 	width: 900px;
