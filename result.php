@@ -68,6 +68,7 @@
 					 print "</tr>\n";
 				}
 				print "</table>\n";
+				print "<span id= 'errorMessage' class='error'></span><br />";
 				print "<a href=\"search.php\"><input class=\"button\" type=\"button\" value=\"<New Search\")\"></a>\n";
 				print "<input type=\"submit\" class=\"button\" value=\"Make Booking for Selected Flight\">\n";
 				print "</form>";

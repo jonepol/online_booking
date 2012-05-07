@@ -27,6 +27,7 @@ function isSelected()
 			return true;
 		}
 	}
-	alert("Please select one flight.");
+	//display error message
+	$("#errorMessage").replaceWith("<span id='errorMessage' class='error' align='center'>Please select one flight.</td>");
 	return false;
 }
