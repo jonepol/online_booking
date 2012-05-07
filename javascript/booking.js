@@ -41,7 +41,8 @@ function isSelected()
 	}
 	else 
 	{
-		alert("Please select at least one seat.");
+		//display error message
+		$("#errorMessage").replaceWith("<span id='errorMessage' class='error' align='center'>Please select at least one seat.</td>");
 		return false;
 	}
 }

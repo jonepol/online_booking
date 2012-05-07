@@ -115,6 +115,7 @@
 			   </tr>
 			   <tfoot>
 			 </table>
+			 <span id= 'errorMessage' class='error'></span><br />
 			 <input class="button" type="submit" value="Add to Bookings">
 		</form>
 		</center>
